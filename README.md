@@ -1,2 +1,4 @@
-# wedding-x
-experimental wedding site
+wedding website
+=================
+
+A wedding website

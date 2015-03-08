@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{parent()}} - rsvp{% endblock %}
+
+  {% block opengraph_meta %}
+  		{{parent()}}
+  {% endblock %} 
+
+{% block headscript %}
+{% endblock %}
+
+{% block body %}
+	{{ parent() }}
+	<div class="container">
+		
+		<div class="col-md-6" />
+			<iframe src="https://docs.google.com/forms/d/1RyWFrVand3SH3J0ynFxsaxbPgws_1eW1kQTThva_GJk/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{parent()}} - rishi{% endblock %}
+
+  {% block opengraph_meta %}
+  		{{parent()}}
+  {% endblock %} 
+
+{% block headscript %}
+{% endblock %}
+
+{% block body %}
+	{{ parent() }}
+	<div class="container">
+		
+		<div class="col-md-6" />
+		<h1>Rishi</h1>
+			<p>Rishi content.</p>
+
+		</div>
+	</div>
+
+{% endblock %}

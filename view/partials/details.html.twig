@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{parent()}} - wedding details{% endblock %}
+
+  {% block opengraph_meta %}
+  		{{parent()}}
+  {% endblock %} 
+
+{% block headscript %}
+{% endblock %}
+
+{% block body %}
+	{{ parent() }}
+	<div class="container">
+		
+		<div class="col-md-6" />
+		<h1>Wedding Details</h1>
+			<p>Much rejoicing.</p>
+
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{parent()}} - location{% endblock %}
+
+  {% block opengraph_meta %}
+  		{{parent()}}
+		<meta property="og:title" content="RishiSatsangi.com - artwerks by Rishi Satsangi">
+		<meta property="og:description" content="Illustration, animation, and more by Rishi Satsangi">
+		<meta property="og:image" content="http://imgsrc.artistcontrolbox.com/images/contents/2.jpg">
+  {% endblock %} 
+
+{% block headscript %}
+{% endblock %}
+
+{% block body %}
+	{{ parent() }}
+	<div class="container">
+		
+		<div class="col-md-6" />
+			<h1>Location</h1>
+				<iframe width="600" height="450" frameborder="0" style="border:0"
+	src="https://www.google.com/maps/embed/v1/place?q=Hudson+New+York,+West+58th+Street,+New+York,+NY,+United+States&key=AIzaSyBhVOFcoL36qVm9ETAcMfaQOC2bdMuIgnQ"></iframe>
+			<h1>Where to stay</h1>
+			<p>Nearby hotel info ...</p>
+		</div>
+	</div>
+
+{% endblock %}
