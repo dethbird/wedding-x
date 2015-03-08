@@ -122,69 +122,6 @@
 	    );
 	});
 
-	$app->get('/prutha', function () use ($app) {
-		
-	    $app->render('partials/prutha.html.twig', array(
-		    	'section'=>'prutha'
-    		)
-	    );
-	});
-
-	$app->get('/rishi', function () use ($app) {
-		
-	    $app->render('partials/rishi.html.twig', array(
-		    	'section'=>'rishi'
-    		)
-	    );
-	});
-
-	$app->get('/story', function () use ($app) {
-		
-	    $app->render('partials/story.html.twig', array(
-		    	'section'=>'story'
-    		)
-	    );
-	});
-
-	$app->get('/details', function () use ($app) {
-		
-	    $app->render('partials/details.html.twig', array(
-		    	'section'=>'story'
-    		)
-	    );
-	});
-
-	$app->get('/gallery', function () use ($app) {
-		
-	    $app->render('partials/gallery.html.twig', array(
-		    	'section'=>'gallery'
-    		)
-	    );
-	});
-
-	$app->get('/location', function () use ($app) {
-		
-	    $app->render('partials/location.html.twig', array(
-		    	'section'=>'location'
-    		)
-	    );
-	});
-
-	$app->get('/contact', function () use ($app) {
-		
-	    $app->render('partials/contact.html.twig', array(
-		    	'section'=>'contact'
-    		)
-	    );
-	});	
-
-	$app->get('/rsvp', function () use ($app) {
-		
-	    $app->render('partials/rsvp.html.twig', array(
-		    	'section'=>'rsvp'
-    		)
-	    );
-	});
 
 	/**
 	* __________            ._._._.
