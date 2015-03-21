@@ -1,0 +1,59 @@
+body {
+}
+
+.outer {
+	position:absolute;
+	overflow:hidden;
+	background-color:#ff9c00;
+}
+
+/* Layout */
+.object {
+	position:absolute;
+}
+.z-background {
+	z-index:1000;
+	top: 240px;
+}
+.z-characters {
+	z-index:1500;
+}
+.load-hide {
+	display:none;
+	visibility: hidden;
+}
+
+
+/* Individual elements */
+#rsvp-elephant {
+	top: 660px;
+	left: 50px;
+}
+#rsvp-coming {
+	top: 10px;
+	left: 200px;
+}
+
+/*
+.level1 {
+
+	left:100px;
+	z-index:1500;
+	position: absolute;
+	width:60%;
+}
+.level2 {
+	left:50px;
+	height:1500px;
+	z-index: 1000;
+	background-image:url("http://www.transparenttextures.com/patterns/argyle.png");
+	position: absolute;
+	width:60%;
+}
+.level3 {
+	height:1500px;
+	z-index: 500;
+	background-image:url("http://www.transparenttextures.com/patterns/black-thread.png");
+	position: absolute;
+	width:60%;
+}*/

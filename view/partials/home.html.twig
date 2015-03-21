@@ -1,23 +1,14 @@
-{% extends 'layout.html.twig' %}
-
-{% block title %}{{parent()}} - home{% endblock %}
-
-  {% block opengraph_meta %}
-  		{{parent()}}
-  {% endblock %} 
-
-{% block headscript %}
-{% endblock %}
+{% extends 'layout-experimental.html.twig' %}
 
 {% block body %}
 	{{ parent() }}
-	<div class="container">
+	<div class="outer">
 		
-		<div class="col-md-6" />
-		<h1>Home</h1>
-			<p>Home content.</p>
+		<img class="object z-characters" id="rsvp-elephant" src="/img/rsvp.elephant.png" />
+		<img class="object z-characters swap" id="rsvp-coming" src="/img/rsvp.coming.swap.png" />
+		<img class="object z-characters load-hide" id="rsvp-coming-swap" src="/img/rsvp.coming.png" />
 
-		</div>
+		<img class="object z-background" id="rsvp-background" src="/img/rsvp.background.jpg" />
 	</div>
 
 {% endblock %}
