@@ -46,8 +46,8 @@ $(window).load(function(){
 
 	var scurry = function(object) {
 		object.css({
-			height: Math.floor(scale * object.data('height') * object.attr('data-scurry-start-scale')),
-			width: Math.floor(scale * object.data('width') * object.attr('data-scurry-start-scale'))
+			height: Math.floor(scale * object.data('height') * object.attr('data-scurry-start-scale')) + 'px',
+			width: Math.floor(scale * object.data('width') * object.attr('data-scurry-start-scale')) + 'px'
 		});
 
 		TweenLite.to(
@@ -60,9 +60,10 @@ $(window).load(function(){
 				width: Math.floor(scale * object.data('width') * object.attr('data-scurry-end-scale')),
 				ease: Power1.easeIn,
 				onComplete: function(){
-					console.log(scale);
-					object.css({left: object.data('left')});
-					object.css({top: object.data('top')});
+					object.css({
+						left: object.data('left') + 'px',
+						top: Math.floor(scale * object.data('top')) + 'px'
+					});
 					var min = 1000 * parseInt(object.attr("data-scurry-random-delay-min"));
 					var max = 1000 * parseInt(object.attr("data-scurry-random-delay-max"));
 					var timeout = Math.floor((Math.random() * (max - min)) + min);
