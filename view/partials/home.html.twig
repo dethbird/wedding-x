@@ -2,13 +2,38 @@
 
 {% block body %}
 	{{ parent() }}
-	<div class="outer">
+	<div class="object outer">
+
+		<!-- RSVP -->
+		<img class="object z-background rotate" data-rotate-duration="15" id="rsvp-rotating-star" src="/img/rsvp.rotating-star.png" />
+		<img class="object z-background" id="rsvp-background" src="/img/rsvp.background.png" />
 		
 		<img class="object z-characters" id="rsvp-elephant" src="/img/rsvp.elephant.png" />
+
 		<img class="object z-characters swap" id="rsvp-coming" src="/img/rsvp.coming.swap.png" />
 		<img class="object z-characters load-hide" id="rsvp-coming-swap" src="/img/rsvp.coming.png" />
 
-		<img class="object z-background" id="rsvp-background" src="/img/rsvp.background.jpg" />
+		<img class="object z-characters swap" id="rsvp-no" src="/img/rsvp.no.swap.png" />
+		<img class="object z-characters load-hide" id="rsvp-no-swap" src="/img/rsvp.no.png" />
+
+		<img class="object z-characters swap" id="rsvp-yes" src="/img/rsvp.yes.swap.png" />
+		<img class="object z-characters load-hide" id="rsvp-yes-swap" src="/img/rsvp.yes.png" />
+
+		<img class="object z-characters" id="rsvp-model" src="/img/rsvp.model.png" />
+
+		<img class="object z-characters" id="rsvp-mouse" src="/img/library.mouse.png" />
+
+
+
+		<!-- RSVP -->
+		<img class="object z-background" id="location-background" src="/img/location.background-color.png" />
+		<img class="object z-background" id="location-layout" src="/img/location.layout.png" />
+
+		<img class="object z-characters" id="location-door-arrow" src="/img/location.door-arrow.png" />
+		<img class="object z-characters" id="location-green-door" src="/img/location.green-door.png" />
+
+
+
 	</div>
 
 {% endblock %}

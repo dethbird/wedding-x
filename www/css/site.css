@@ -1,4 +1,5 @@
 body {
+	background-color:#ff9c00;
 }
 
 .outer {
@@ -32,6 +33,42 @@ body {
 #rsvp-coming {
 	top: 10px;
 	left: 200px;
+}
+#rsvp-no {
+	top: 710px;
+	left: 830px;
+}
+#rsvp-yes {
+	top: 710px;
+	left: 1070px;
+}
+#rsvp-model {
+	top: 1000px;
+	left: 1400px;
+}
+#rsvp-mouse {
+	top: 1450px;
+	left: 500px;
+}
+#rsvp-rotating-star {
+	top: -200px;
+	left: 100px;
+}
+
+#location-background {
+	top: 1525px;
+}
+#location-layout {
+	left: 500px;
+	top: 1875px;
+}
+#location-green-door {
+	left: 50px;
+	top: 1900px;
+}
+#location-door-arrow {
+	left: 100px;
+	top: 2450px;
 }
 
 /*

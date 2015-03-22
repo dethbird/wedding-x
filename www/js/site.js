@@ -1,7 +1,7 @@
 var configs = {
 	container: { 
 		width: 1900,
-		height: 1460
+		height: 3500
 	}
 }
 
@@ -12,6 +12,7 @@ $(window).load(function(){
 	// functions
 	var rescale = function(){
 		scale = w.outerWidth() / configs.container.width;
+		// scale = scale * 0.6;
 		$('.object').each(function(i,object){
 			var object = $(object);
 			object.css({
@@ -33,6 +34,9 @@ $(window).load(function(){
 		width:configs.container.width + "px",
 		height:configs.container.height + "px"
 	});
+
+	// array of animation timelines
+	var timelines = [];
 
 	// set intial data for all objects
 	$('.object').each(function(i,object){
@@ -59,7 +63,13 @@ $(window).load(function(){
 				object.mouseout(function(){
 					object.attr('src', object.data('src'));
 				});
-			}	
+			}
+		}
+
+		if (object.hasClass('rotate')) {
+			var repeatTimeline = new TimelineMax({repeat:-1});
+			repeatTimeline.add(TweenMax.to(object, object.attr('data-rotate-duration'), {rotationZ: 360, ease: Power0.easeNone}));
+			timelines.push(repeatTimeline);
 		}
 
 	});
@@ -69,8 +79,5 @@ $(window).load(function(){
 	w.resize(function(){
 		rescale();
 	});
-
-
-	// TweenLite.to("#rsvp-elephant", 3.5, {rotationZ: 20});
 
 });
