@@ -1,51 +1,81 @@
 {% extends 'layout-experimental.html.twig' %}
 
 {% block body %}
-	{{ parent() }}
-	<div class="object outer">
+    {{ parent() }}
+    <div class="object outer">
 
-		<!-- RSVP -->
-		<img class="object z-background rotate" data-rotate-duration="15" id="rsvp-rotating-star" src="/img/rsvp.rotating-star.png" />
-		<img class="object z-background" id="rsvp-background" src="/img/rsvp.background.png" />
+        <!-- BACKGROUNDS -->
 
-		<img class="object z-characters scurry"
-			data-scurry-start-scale="0.5"
-			data-scurry-end-scale="0.85"
-			data-scurry-end-top="1525"
-			data-scurry-duration="3" 
-			data-scurry-initial-delay="1" 
-			data-scurry-random-delay-min="5" 
-			data-scurry-random-delay-max="15" 
-			id="rsvp-mouse" 
-			src="/img/library.mouse.png" 
-		/>
-		
-		<img class="object z-characters" id="rsvp-elephant" src="/img/rsvp.elephant.png" />
+        <img class="object z-background" id="story-background" src="/img/story.background.png" />
 
-		<img class="object z-characters swap" id="rsvp-coming" src="/img/rsvp.coming.swap.png" />
-		<img class="object z-characters load-hide" id="rsvp-coming-swap" src="/img/rsvp.coming.png" />
+        <img class="object z-background rotate" data-rotate-duration="15" id="rsvp-rotating-star" src="/img/rsvp.rotating-star.png" />
+        <img class="object z-background" id="rsvp-background" src="/img/rsvp.background.png" />
 
-		<img class="object z-characters swap" id="rsvp-no" src="/img/rsvp.no.swap.png" />
-		<img class="object z-characters load-hide" id="rsvp-no-swap" src="/img/rsvp.no.png" />
+        <img class="object z-background" id="location-background" src="/img/location.background-color.png" />
+        <img class="object z-background" id="location-layout" src="/img/location.layout.png" />
 
-		<img class="object z-characters swap" id="rsvp-yes" src="/img/rsvp.yes.swap.png" />
-		<img class="object z-characters load-hide" id="rsvp-yes-swap" src="/img/rsvp.yes.png" />
+        <!-- CHARACTERS -->
 
-		<img class="object z-characters" id="rsvp-model" src="/img/rsvp.model.png" />
+        <!-- section: rsvp -->
+        <img class="object z-characters scurry"
+            data-start-scale="0.5"
+            data-end-scale="0.85"
+            data-end-top="1525"
+            data-duration="3" 
+            data-initial-delay="1" 
+            data-random-delay-min="5" 
+            data-random-delay-max="15" 
+            id="rsvp-mouse" 
+            src="/img/library.mouse.png" 
+        />
+         
+        <img class="object z-characters" id="rsvp-elephant" src="/img/rsvp.elephant.png" />
 
+        <img class="object z-characters swap" id="rsvp-coming" src="/img/rsvp.coming.swap.png" />
+        <img class="object z-characters load-hide" id="rsvp-coming-swap" src="/img/rsvp.coming.png" />
 
+        <img class="object z-characters swap" id="rsvp-no" src="/img/rsvp.no.swap.png" />
+        <img class="object z-characters load-hide" id="rsvp-no-swap" src="/img/rsvp.no.png" />
 
+        <img class="object z-characters swap" id="rsvp-yes" src="/img/rsvp.yes.swap.png" />
+        <img class="object z-characters load-hide" id="rsvp-yes-swap" src="/img/rsvp.yes.png" />
 
-
-		<!-- RSVP -->
-		<img class="object z-background" id="location-background" src="/img/location.background-color.png" />
-		<img class="object z-background" id="location-layout" src="/img/location.layout.png" />
-
-		<img class="object z-characters" id="location-door-arrow" src="/img/location.door-arrow.png" />
-		<img class="object z-characters" id="location-green-door" src="/img/location.green-door.png" />
+        <img class="object z-characters" id="rsvp-model" src="/img/rsvp.model.png" />
 
 
 
-	</div>
+        <!-- section: location -->
+        <img class="object z-characters" id="location-door-arrow" src="/img/location.door-arrow.png" />
+        <img class="object z-characters" id="location-green-door" src="/img/location.green-door.png" />
+
+        <!-- section: story -->     
+        <img class="object z-characters" id="story-title" src="/img/story.title.png" />
+        
+        <!-- shikar -->
+        <img class="object z-characters array" 
+            id="story-shikari"
+            data-min-scale="0.02"
+            data-max-scale="0.65"
+            data-count="30"
+            data-min-x-variance="700"
+            data-min-y-variance="250"
+            src="/img/story.shikari.png" 
+        />
+
+        <img class="object z-characters array" 
+            id="story-amulgirl"
+            data-min-scale="0.02"
+            data-max-scale="0.65"
+            data-count="30"
+            data-min-x-variance="700"
+            data-min-y-variance="250"
+            src="/img/story.amulgirl.png" 
+        />
+
+        <img class="object z-characters" id="story-buttering" src="/img/story.buttering.png" />
+        <img class="object z-characters" id="story-marryme" src="/img/story.marryme.png" />
+        
+
+    </div>
 
 {% endblock %}

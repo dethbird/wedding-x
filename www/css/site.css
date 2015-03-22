@@ -70,6 +70,30 @@ body {
 	top: 2450px;
 }
 
+#story-background {
+	top: 3000px;
+}
+#story-title {
+	left: 50px;
+	top: 3200px;
+}
+#story-shikari {
+	left: 1210px;
+	top: 3600px;
+}
+#story-amulgirl {
+	left: 280px;
+	top: 4100px;
+}
+#story-buttering {
+	left: 800px;
+	top: 4400px;
+}
+#story-marryme {
+	left: 300px;
+	top: 3800px;
+}
+
 /*
 .level1 {
 
