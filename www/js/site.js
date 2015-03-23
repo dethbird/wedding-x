@@ -1,7 +1,7 @@
 var configs = {
     container: { 
         width: 1900,
-        height: 5500
+        height: 5645
     }
 }
 
@@ -118,7 +118,7 @@ $(window).load(function(){
             clone.attr('data-parent-id', object.attr('id'));
             
             clone.css('z-index', object.css('z-index') - Math.floor(100 - modifierScale * 100));
-            clone.css('opacity', modifierScale);
+            clone.css('opacity', modifierScale + 0.07);
 
             // var pos = object.position();
             clone.css('height', object.height() * modifierScale);
@@ -164,7 +164,7 @@ $(window).load(function(){
             });
         }
 
-        var t = setTimeout(interactiveArray, 30000, object);
+        // var t = setTimeout(interactiveArray, 10000, object);
 
     }
 

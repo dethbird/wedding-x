@@ -16,6 +16,10 @@ body {
 	z-index:1000;
 	top: 240px;
 }
+.z-background {
+	z-index:990;
+	top: 240px;
+}
 .z-characters {
 	z-index:1500;
 }
@@ -79,19 +83,27 @@ body {
 }
 #story-shikari {
 	left: 1210px;
-	top: 3600px;
+	top: 3400px;
 }
 #story-amulgirl {
 	left: 280px;
-	top: 4100px;
+	top: 3800px;
 }
 #story-buttering {
-	left: 800px;
-	top: 4400px;
+	left: 1000px;
+	top: 4200px;
 }
 #story-marryme {
 	left: 300px;
-	top: 3800px;
+	top: 3700px;
+}
+
+#honeymoon-background {
+	top: 4500px;
+}
+#honeymoon-spaceship {
+	left: 350px;
+	top: 5200px;
 }
 
 /*
