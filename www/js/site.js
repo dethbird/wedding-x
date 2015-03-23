@@ -32,7 +32,6 @@ $(window).load(function(){
     // functions
     var rescale = function(){
         scale = w.outerWidth() / configs.container.width;
-        // scale = scale * 0.6;
         $('.object').each(function(i,object){
             var object = $(object);
             object.css({
@@ -41,6 +40,11 @@ $(window).load(function(){
                 top: Math.floor(scale * object.data('top')) + 'px',
                 left: Math.floor(scale * object.data('left')) + 'px'
             });
+
+            /** INTERACTIVE METHODS */
+            if (object.hasClass('array')) {
+                interactiveArray(object);
+            }
         });
     }
 
@@ -71,6 +75,97 @@ $(window).load(function(){
                 }
             }
         );
+    }
+
+    /** 
+     * @requires rescaling happens first
+     */
+    var interactiveArray = function(object) {
+
+
+        // remove existing array children
+        $('.array-child[data-parent-id="' + object.attr('id') + '"]').remove();
+
+        var count = object.attr('data-count');
+
+        var pos = object.position();
+
+        /** @todo create a bounding box around the target array image */
+        // var boundingBox = Math.floor(parseInt(object.attr('data-bounding-box')) * scale);
+
+        // var leftBound = pos.left - boundingBox;
+        // var rightBound = pos.left + boundingBox + object.width();
+        // var topBound = pos.top - boundingBox;
+        // var bottomBound = pos.top + boundingBox + object.height();
+
+
+
+        for (i = 0; i < count; i++) {
+
+            var modifierScale = (Math.random() * (object.attr('data-max-scale') - object.attr('data-min-scale'))) + parseInt(object.attr('data-min-scale'));
+
+            var posNegX = Math.random() > 0.5 ? 1 : -1;
+            var posNegY = Math.random() > 0.5 ? 1 : -1;
+            var modifierXVariance = Math.floor(Math.random() * object.attr('data-min-x-variance') + object.attr('data-min-x-variance'));
+            var modifierYVariance = Math.floor(Math.random() * object.attr('data-min-y-variance') + object.attr('data-min-y-variance'));
+
+            // //clone 4 radially at 45
+            var clone = object.clone();
+            clone.data('moveScale', 1 - modifierScale);
+            clone.removeClass('array');
+            clone.addClass('array-child');
+            clone.attr('id', object.attr('id') + i);
+            clone.attr('data-parent-id', object.attr('id'));
+            
+            clone.css('z-index', object.css('z-index') - Math.floor(100 - modifierScale * 100));
+            clone.css('opacity', modifierScale - 0.15);
+
+            // var pos = object.position();
+            clone.css('height', object.height() * modifierScale);
+            clone.css('width', object.width() * modifierScale);
+
+            // //lock the values
+            clone.data('height', clone.height());
+            clone.data('width', clone.width());
+            // // // save position
+
+            clone.data('top', pos.top + (posNegY * modifierYVariance));
+            clone.data('left', pos.left + (posNegX * modifierXVariance));
+
+            clone.css({
+                top: clone.data('top'),
+                left: clone.data('left')
+            });
+
+            object.before(clone);
+
+            object.mousemove(function(e){
+
+                // find cartesian location on the image
+                var xMove = (e.pageX - pos.left) / object.width();
+                var yMove = (e.pageY - pos.top) / object.height();
+
+                $('.array-child[data-parent-id="' + object.attr('id') + '"]').each(function(i,obj){
+                    obj = $(obj);
+
+                    TweenLite.to(obj, 0.25, {
+                        left: obj.data('left') + (xMove * 500 * obj.data('moveScale')),
+                        top: obj.data('top') + (yMove * 500 * obj.data('moveScale'))
+                    });
+                });
+
+            });
+
+            object.mouseout(function(e){
+                $('.array-child[data-parent-id="' + object.attr('id') + '"]').each(function(i,obj){
+                    obj = $(obj);
+                    TweenLite.to(obj, 0.25, {left: obj.data('left'), top: obj.data('top'),  ease: Bounce.easeOut});
+                });
+            });
+        }
+
+        var t = setTimeout(interactiveArray, 30000, object);
+
     }
 
 
@@ -116,45 +211,7 @@ $(window).load(function(){
             var t = setTimeout(scurry, parseInt(object.attr('data-initial-delay')) * 1000, object);
         }
 
-        if (object.hasClass('array')) {
-            
-            var count = object.attr('data-count');
-
-            for (i = 0; i < count; i++) {
-
-                var modifierScale = (Math.random() * (object.attr('data-max-scale') - object.attr('data-min-scale'))) + parseInt(object.attr('data-min-scale'));
-
-                var posNegX = Math.random() > 0.5 ? 1 : -1;
-                var posNegY = Math.random() > 0.5 ? 1 : -1;
-                var modifierXVariance = Math.floor(Math.random() * object.attr('data-min-x-variance') + object.attr('data-min-x-variance'));
-                var modifierYVariance = Math.floor(Math.random() * object.attr('data-min-y-variance') + object.attr('data-min-y-variance'));
-
-                // //clone 4 radially at 45
-                var clone = object.clone();
-                clone.removeClass('array');
-                clone.attr('id', object.attr('id') + i);
-                clone.css('z-index', object.css('z-index') - Math.floor(100 - modifierScale * 100));
-                clone.css('opacity', modifierScale - 0.15);
-
-                var pos = object.position();
-                // clone.css('top', pos.top + (posNegY * modifierYVariance));
-                // clone.css('left', pos.left + (posNegX * modifierXVariance));
-                clone.css('height', object.height() * modifierScale);
-                clone.css('width', object.width() * modifierScale);
-
-                // //lock the values
-                clone.data('height', clone.height());
-                clone.data('width', clone.width());
-                // // // save position
-
-                clone.data('top', pos.top + (posNegY * modifierYVariance) + Math.floor(object.height()*(0.5)) * modifierScale);
-                clone.data('left', pos.left + (posNegX * modifierXVariance) + Math.floor(object.width()/4));
-
-
-                object.before(clone);
-            }
-
-        }
+        
 
         // save dimensions
         object.data('height', object.height());
