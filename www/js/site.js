@@ -106,8 +106,8 @@ $(window).load(function(){
 
             var posNegX = Math.random() > 0.5 ? 1 : -1;
             var posNegY = Math.random() > 0.5 ? 1 : -1;
-            var modifierXVariance = Math.floor(Math.random() * object.attr('data-min-x-variance') + object.attr('data-min-x-variance'));
-            var modifierYVariance = Math.floor(Math.random() * object.attr('data-min-y-variance') + object.attr('data-min-y-variance'));
+            var modifierXVariance = Math.floor(Math.random() * object.attr('data-x-variance'));
+            var modifierYVariance = Math.floor(Math.random() * object.attr('data-y-variance'));
 
             // //clone 4 radially at 45
             var clone = object.clone();
@@ -118,7 +118,7 @@ $(window).load(function(){
             clone.attr('data-parent-id', object.attr('id'));
             
             clone.css('z-index', object.css('z-index') - Math.floor(100 - modifierScale * 100));
-            clone.css('opacity', modifierScale - 0.15);
+            clone.css('opacity', modifierScale);
 
             // var pos = object.position();
             clone.css('height', object.height() * modifierScale);
@@ -129,8 +129,8 @@ $(window).load(function(){
             clone.data('width', clone.width());
             // // // save position
 
-            clone.data('top', pos.top + (posNegY * modifierYVariance));
-            clone.data('left', pos.left + (posNegX * modifierXVariance));
+            clone.data('top', pos.top + (object.height()/4) + (posNegY * modifierYVariance));
+            clone.data('left', pos.left + (object.width()/4) + (posNegX * modifierXVariance));
 
             clone.css({
                 top: clone.data('top'),
@@ -148,7 +148,7 @@ $(window).load(function(){
                 $('.array-child[data-parent-id="' + object.attr('id') + '"]').each(function(i,obj){
                     obj = $(obj);
 
-                    TweenLite.to(obj, 0.25, {
+                    TweenLite.to(obj, 0, {
                         left: obj.data('left') + (xMove * 500 * obj.data('moveScale')),
                         top: obj.data('top') + (yMove * 500 * obj.data('moveScale'))
                     });
