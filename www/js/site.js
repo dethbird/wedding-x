@@ -164,8 +164,6 @@ $(window).load(function(){
             });
         }
 
-        // var t = setTimeout(interactiveArray, 10000, object);
-
     }
 
 
@@ -211,7 +209,55 @@ $(window).load(function(){
             var t = setTimeout(scurry, parseInt(object.attr('data-initial-delay')) * 1000, object);
         }
 
-        
+        if (object.hasClass('replicate')) {
+
+            var modifierScale = 1;
+            var pos = object.position();
+            var count = object.attr('data-count');
+            var leftDirection = object.attr('data-direction-left');
+            var xDistance = parseInt(object.attr('data-x-distance'));
+            var topDirection = object.attr('data-direction-top');
+            var yDistance = parseInt(object.attr('data-y-distance'));
+
+            for (i = 1; i < count; i++) {
+                // console.log(i);
+
+                modifierScale = (1 - (i/count)).toFixed(2);
+
+                var clone = object.clone();
+
+                clone.removeClass('replicate');
+                clone.addClass('replicate-child');
+                clone.attr('id', object.attr('id') + i);
+                clone.attr('data-parent-id', object.attr('id'));
+                
+                clone.css('z-index', object.css('z-index') - Math.floor((1-modifierScale) * 100));
+                // clone.css('opacity', modifierScale);
+
+                // save the scake
+                clone.data('height', object.height() * modifierScale);
+                clone.data('width', object.width() * modifierScale);
+                clone.css('height', clone.data('height'));
+                clone.css('width', clone.data('width'));
+
+
+                // save the position
+                if(leftDirection > 0) {
+                    clone.data('left', pos.left + ((xDistance + object.width()) * (1-modifierScale)));
+                } else {
+                    clone.data('left', pos.left - (xDistance * (1-modifierScale)));
+                }
+                if(topDirection > 0) {
+                    clone.data('top', pos.top + (yDistance * (1-modifierScale)));
+                } else {
+                    clone.data('top', pos.top - (yDistance * (1-modifierScale)));
+                }
+
+                object.before(clone);
+            }
+
+            console.log($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'));
+        }
 
         // save dimensions
         object.data('height', object.height());
