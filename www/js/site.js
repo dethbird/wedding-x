@@ -46,6 +46,14 @@ $(window).load(function(){
                 interactiveArray(object);
             }
         });
+
+        $('.z-modal').each(function(i,modal){
+            modal = $(modal);
+            modal.css({
+                top: Math.floor(scale * modal.data('top')) + 'px',
+                left: Math.floor(scale * modal.data('left')) + 'px'
+            });
+        });
     }
 
     var scurry = function(object) {
@@ -172,10 +180,6 @@ $(window).load(function(){
         repeatTimeline.add(TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 0, ease: Power0.easeNone, yoyo: true}, .1));
         repeatTimeline.add(TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 1, ease: Power0.easeNone, yoyo: true}, .1));
 
-
-        // TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 0.2, ease: Power0.easeNone, onComplete: function(){
-        //     this.reverse();
-        // }}, .1);
     }
 
 
@@ -283,10 +287,23 @@ $(window).load(function(){
 
     });
 
+    $('.z-modal').each(function(i,modal){
+        modal = $(modal);
+        var pos = modal.position();
+        console.log(modal);
+        console.log(pos);
+        modal.data("left", pos.left);
+        modal.data("top", pos.top);
+        modal.hide();
+    });
+
     $('.modal_trigger').each(function(i,btn){
         btn = $(btn);
         btn.on('click', function(e){
-            console.log($(e.target).data('modal-id'));
+            var modal = $('#' + $(e.target).data('modal-id'));
+            modal.show();
+            // modal.css({top: 0, left: 0, zIndex: 5000, border: '1px solid red', height: 300, width: 300});
+            console.log(modal);
         });
     });
 

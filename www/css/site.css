@@ -24,6 +24,10 @@ body {
 .z-characters {
 	z-index:1500;
 }
+.z-modal {
+	position:absolute;
+	z-index:5000;
+}
 .load-hide {
 	display:none;
 	visibility: hidden;
@@ -59,6 +63,12 @@ body {
 #rsvp-rotating-star {
 	top: -200px;
 	left: 100px;
+}
+#rsvp_modal {
+	top:250px;
+	left:450px;
+	height: 820px;
+	width: 780px;
 }
 
 #location-background {

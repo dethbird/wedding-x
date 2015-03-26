@@ -2,7 +2,7 @@
 
 {% block body %}
     {{ parent() }}
-    <div class="object outer">
+    <div class="object outer" id="main_container">
 
         <!-- BACKGROUNDS -->
 
@@ -36,11 +36,11 @@
         <img class="object z-characters swap" id="rsvp-coming" src="/img/rsvp.coming.swap.png" />
         <img class="object z-characters load-hide" id="rsvp-coming-swap" src="/img/rsvp.coming.png" />
 
-        <img class="object z-characters swap modal_trigger" data-modal-id="rsvp_form"  id="rsvp-no" src="/img/rsvp.no.swap.png" />
-        <img class="object z-characters load-hide modal_trigger" data-modal-id="rsvp_form"  id="rsvp-no-swap" src="/img/rsvp.no.png" />
+        <img class="object z-characters swap modal_trigger" data-modal-id="rsvp_modal"  id="rsvp-no" src="/img/rsvp.no.swap.png" />
+        <img class="object z-characters load-hide modal_trigger" data-modal-id="rsvp_modal"  id="rsvp-no-swap" src="/img/rsvp.no.png" />
 
-        <img class="object z-characters swap modal_trigger" data-modal-id="rsvp_form" id="rsvp-yes" src="/img/rsvp.yes.swap.png" /></a>
-        <img class="object z-characters load-hide modal_trigger"  data-modal-id="rsvp_form" id="rsvp-yes-swap" src="/img/rsvp.yes.png" />
+        <img class="object z-characters swap modal_trigger" data-modal-id="rsvp_modal" id="rsvp-yes" src="/img/rsvp.yes.swap.png" /></a>
+        <img class="object z-characters load-hide modal_trigger"  data-modal-id="rsvp_modal" id="rsvp-yes-swap" src="/img/rsvp.yes.png" />
 
         <img class="object z-characters" id="rsvp-model" src="/img/rsvp.model.png" />
 
@@ -81,6 +81,10 @@
         <img class="object z-characters" id="honeymoon-spaceship" src="/img/honemoon.spaceship.png" />
 
 
+        <div class="z-modal" id="rsvp_modal">
+            <iframe src="https://docs.google.com/forms/d/1RyWFrVand3SH3J0ynFxsaxbPgws_1eW1kQTThva_GJk/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+        </div>
     </div>
 
 {% endblock %}
