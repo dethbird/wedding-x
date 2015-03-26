@@ -5,8 +5,6 @@ var configs = {
     }
 }
 
-var scale = 1.0;
-
 $(window).load(function(){
 
     /**
@@ -30,8 +28,8 @@ $(window).load(function(){
     var timelines = [];
 
     // functions
-    var rescale = function(scale){
-        scale = scale ? scale : w.outerWidth() / configs.container.width;
+    var rescale = function(_scale){
+        scale = _scale !== undefined ? _scale : w.outerWidth() / configs.container.width;
         $('.object').each(function(i,object){
             var object = $(object);
             object.css({
