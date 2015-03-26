@@ -283,6 +283,13 @@ $(window).load(function(){
 
     });
 
+    $('.modal_trigger').each(function(i,btn){
+        btn = $(btn);
+        btn.on('click', function(e){
+            console.log($(e.target).data('modal-id'));
+        });
+    });
+
     // update scale on window resize
     rescale();
     w.resize(function(){

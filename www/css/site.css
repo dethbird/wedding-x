@@ -1,5 +1,6 @@
 body {
 	background-color:#ff9c00;
+	cursor: crosshair;
 }
 
 .outer {
@@ -40,10 +41,12 @@ body {
 #rsvp-no {
 	top: 710px;
 	left: 830px;
+	cursor: pointer;
 }
 #rsvp-yes {
 	top: 710px;
 	left: 1070px;
+	cursor: pointer;
 }
 #rsvp-model {
 	top: 1000px;
