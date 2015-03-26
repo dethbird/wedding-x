@@ -166,6 +166,18 @@ $(window).load(function(){
 
     }
 
+    var shimmerMyChildren = function (object) {
+        var repeatTimeline = new TimelineMax({repeat:-1});
+        
+        repeatTimeline.add(TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 0, ease: Power0.easeNone, yoyo: true}, .1));
+        repeatTimeline.add(TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 1, ease: Power0.easeNone, yoyo: true}, .1));
+
+
+        // TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 0.2, ease: Power0.easeNone, onComplete: function(){
+        //     this.reverse();
+        // }}, .1);
+    }
+
 
     // set initial outer box width
     o.css({
@@ -256,7 +268,7 @@ $(window).load(function(){
                 object.before(clone);
             }
 
-            console.log($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'));
+            shimmerMyChildren(object);
         }
 
         // save dimensions
