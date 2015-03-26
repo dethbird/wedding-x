@@ -310,6 +310,12 @@ $(window).load(function(){
         });
     });
 
+    $(document).keyup(function(e){
+        if (e.keyCode == 27) {
+            $('.modal-close').trigger('click');
+        }
+    });
+
     // update scale on window resize
     rescale();
     w.resize(function(){
