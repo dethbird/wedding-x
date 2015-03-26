@@ -30,8 +30,8 @@ $(window).load(function(){
     var timelines = [];
 
     // functions
-    var rescale = function(){
-        scale = w.outerWidth() / configs.container.width;
+    var rescale = function(scale){
+        scale = scale ? scale : w.outerWidth() / configs.container.width;
         $('.object').each(function(i,object){
             var object = $(object);
             object.css({
@@ -290,20 +290,25 @@ $(window).load(function(){
     $('.z-modal').each(function(i,modal){
         modal = $(modal);
         var pos = modal.position();
-        console.log(modal);
-        console.log(pos);
         modal.data("left", pos.left);
         modal.data("top", pos.top);
         modal.hide();
     });
 
-    $('.modal_trigger').each(function(i,btn){
+    $('.modal-trigger').each(function(i,btn){
         btn = $(btn);
         btn.on('click', function(e){
             var modal = $('#' + $(e.target).data('modal-id'));
             modal.show();
-            // modal.css({top: 0, left: 0, zIndex: 5000, border: '1px solid red', height: 300, width: 300});
-            console.log(modal);
+            rescale(1);
+        });
+    });
+    $('.modal-close').each(function(i,btn){
+        btn = $(btn);
+        btn.on('click', function(e){
+            var modal = $('#' + $(e.target).data('modal-id'));
+            modal.hide();
+            rescale();
         });
     });
 
