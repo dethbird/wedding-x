@@ -43,7 +43,7 @@ $(window).load(function(){
             if (object.hasClass('array')) {
                 interactiveArray(object);
             }
-            
+
         });
 
         $('.z-modal').each(function(i,modal){
@@ -278,11 +278,12 @@ $(window).load(function(){
             object.mousemove(function(e){
                 var pos = object.position();
                 var xPos = e.pageX - (pos.left + object.width())/2;
-                // var yPos = (e.pageY - pos.top) - object.height()/2;
+                var yPos = (e.pageY - pos.top) - object.height()/2;
                 $('.parallax[data-parallax-id="' + object.data('parallax-id') + '"]').each(function(i,parallax){
                     parallax = $(parallax);
                     parallax.css ({
-                        left: ((parallax.data('left') * scale) + ((xPos/object.width()) * parallax.data('x-variance'))) * parallax.data('x-direction')
+                        left: ((parallax.data('left') * scale) + ((xPos/object.width()) * parallax.data('x-variance')*scale)) * parallax.data('direction'),
+                        top: (parallax.data('top') * scale) + (yPos/(object.height()/2) * parallax.data('y-variance') * scale * parallax.data('direction'))
                     });
                 });
             });
