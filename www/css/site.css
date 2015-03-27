@@ -145,10 +145,17 @@ body {
 
 #honeymoon-background {
 	top: 4450px;
+	left:100px;
 }
 #honeymoon-spaceship {
-	left: 650px;
-	top: 5000px;
+	left: 660px;
+	top: 5160px;
+}
+#honeymoon-parallax-detector {
+	top: 4450px;
+	left: 0px;
+	width:1900px;
+	height: 1300px;
 }
 
 /*

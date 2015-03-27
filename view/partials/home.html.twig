@@ -11,7 +11,21 @@
         <img class="object z-background rotate" data-rotate-duration="15" id="rsvp-rotating-star" src="/img/rsvp.rotating-star.png" />
         <img class="object z-background" id="rsvp-background" src="/img/rsvp.background.png" />
 
-        <img class="object z-background01" id="honeymoon-background" src="/img/honeymoon.background.jpg" />
+        <img class="object z-background01 parallax" 
+            data-parallax-id="space" 
+            id="honeymoon-background"
+            data-x-variance="50"
+            data-x-direction="-1"
+            src="/img/honeymoon.background.jpg" 
+        />
+        <img class="object z-background01 parallax"
+            data-parallax-id="space"
+            data-x-variance="100"
+            data-x-direction="1"
+            id="honeymoon-spaceship"
+            src="/img/honemoon.spaceship.png"
+        />
+        <div class="object z-characters parallax-detector" data-parallax-id="space" id="honeymoon-parallax-detector"></div>
 
         <img class="object z-background" id="location-background" src="/img/location.background-color.png" />
         <img class="object z-background" id="location-layout" src="/img/location.layout.png" />
@@ -81,16 +95,16 @@
         <img class="object z-characters" id="story-marryme" src="/img/story.marryme.png" />
         
         <!-- section: honeymoon -->
-        <img class="object z-characters" id="honeymoon-spaceship" src="/img/honemoon.spaceship.png" />
 
 
+        <!-- MODALS -->
         <div class="z-modal" id="rsvp_modal" data-window-scale="0.8">
-            <img class="modal-close" data-modal-id="rsvp_modal" src="http://www.boofle.co.uk/images/close_button.png" />
+            <img class="modal-close" data-modal-id="rsvp_modal" src="/img/close-button.png" />
             <iframe src="https://docs.google.com/forms/d/1RyWFrVand3SH3J0ynFxsaxbPgws_1eW1kQTThva_GJk/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
 
         <div class="z-modal" id="location_map_modal" data-window-scale="0.7">
-            <img class="modal-close" data-modal-id="location_map_modal" src="http://www.boofle.co.uk/images/close_button.png" />
+            <img class="modal-close" data-modal-id="location_map_modal" src="/img/close-button.png" />
             <br class="clearfix"/>
             <iframe width="600" height="450" frameborder="0" style="border:0"
     src="https://www.google.com/maps/embed/v1/place?q=Hudson+New+York,+West+58th+Street,+New+York,+NY,+United+States&key=AIzaSyBhVOFcoL36qVm9ETAcMfaQOC2bdMuIgnQ"></iframe>
