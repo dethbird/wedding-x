@@ -49,6 +49,9 @@
         <!-- section: location -->
         <img class="object z-characters" id="location-door-arrow" src="/img/location.door-arrow.png" />
         <img class="object z-characters" id="location-green-door" src="/img/location.green-door.png" />
+        <img class="object z-characters modal-trigger" data-modal-id="location_map_modal" id="location-map-button" src="http://icons.iconarchive.com/icons/thiago-silva/palm/256/Google-Maps-icon.png" />
+
+
 
         <!-- section: story -->     
         <img class="object z-characters" id="story-title" src="/img/story.title.png" />
@@ -59,7 +62,7 @@
             data-direction-left="-1"
             data-x-distance="1200"
             data-direction-top="1"
-            data-y-distance="310"
+            data-y-distance="270"
             id="story-shikari"
             src="/img/story.shikari.png" 
         />
@@ -81,9 +84,16 @@
         <img class="object z-characters" id="honeymoon-spaceship" src="/img/honemoon.spaceship.png" />
 
 
-        <div class="z-modal" id="rsvp_modal">
+        <div class="z-modal" id="rsvp_modal" data-window-scale="0.8">
             <img class="modal-close" data-modal-id="rsvp_modal" src="http://www.boofle.co.uk/images/close_button.png" />
             <iframe src="https://docs.google.com/forms/d/1RyWFrVand3SH3J0ynFxsaxbPgws_1eW1kQTThva_GJk/viewform?embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+
+        <div class="z-modal" id="location_map_modal" data-window-scale="0.7">
+            <img class="modal-close" data-modal-id="location_map_modal" src="http://www.boofle.co.uk/images/close_button.png" />
+            <br class="clearfix"/>
+            <iframe width="600" height="450" frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?q=Hudson+New+York,+West+58th+Street,+New+York,+NY,+United+States&key=AIzaSyBhVOFcoL36qVm9ETAcMfaQOC2bdMuIgnQ"></iframe>
         </div>
     </div>
 

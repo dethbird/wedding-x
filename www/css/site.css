@@ -37,6 +37,9 @@ body {
 	height:50px;
 	cursor: pointer;
 }
+.modal-trigger {
+	cursor: pointer;
+}
 
 /* Individual elements */
 #rsvp-elephant {
@@ -91,37 +94,61 @@ body {
 	left: 100px;
 	top: 2450px;
 }
+#location-map-button {
+	left: 1550px;
+	top: 1625px;
+}
+#location_map_modal {
+	top:2000px;
+	left:450px;
+	height: 700px;
+	width: 700px;
+}
 
 #story-background {
-	top: 3000px;
+	top: 2900px;
 }
 #story-title {
-	left: 50px;
+	left: 150px;
 	top: 3200px;
+	-webkit-transform: rotate(15deg);
+	-moz-transform': rotate(15deg);
+	-ms-transform': rotate(15deg);
+	-o-transform': rotate(15deg);
 }
 #story-shikari {
-	left: 1310px;
+	left: 1350px;
 	top: 3400px;
 }
 #story-amulgirl {
-	left: 80px;
-	top: 3750px;
+	left: 50px;
+	top: 3600px;
 }
 #story-buttering {
-	left: 1000px;
+	left: 750px;
 	top: 4200px;
+
+	-webkit-transform: rotate(7deg);
+	-moz-transform': rotate(7deg);
+	-ms-transform': rotate(7deg);
+	-o-transform': rotate(7deg);	
 }
 #story-marryme {
-	left: 300px;
-	top: 3700px;
+	left: 520px;
+	top: 3610px;
+
+	-webkit-transform: rotate(-4deg);
+	-moz-transform': rotate(-4deg);
+	-ms-transform': rotate(-4deg);
+	-o-transform': rotate(-4deg);
 }
 
 #honeymoon-background {
-	top: 4500px;
+	top: 4450px;
 }
 #honeymoon-spaceship {
-	left: 350px;
-	top: 5200px;
+	left: 650px;
+	top: 5000px;
 }
 
 /*

@@ -1,7 +1,7 @@
 var configs = {
     container: { 
         width: 1900,
-        height: 5645
+        height: 5580
     }
 }
 
@@ -298,7 +298,7 @@ $(window).load(function(){
         btn.on('click', function(e){
             var modal = $('#' + $(e.target).data('modal-id'));
             modal.show();
-            rescale(1);
+            rescale(modal.attr('data-window-scale'));
         });
     });
     $('.modal-close').each(function(i,btn){
