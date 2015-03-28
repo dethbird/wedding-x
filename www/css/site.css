@@ -87,7 +87,7 @@ body {
 }
 #location-layout {
 	left: 500px;
-	top: 1875px;
+	top: 1800px;
 }
 #location-green-door {
 	left: 50px;
@@ -99,21 +99,15 @@ body {
 }
 #location-map-button {
 	left: 1550px;
-	top: 1625px;
+	top: 2950px;
 	height: auto;
 	max-width: 256px;
 }
 #location-calendar-button {
 	left: 1300px;
-	top: 1640px;
+	top: 2900px;
 	height: auto;
-	max-width: 200px;
-}
-#location_map_modal {
-	top:2000px;
-	left:450px;
-	height: 700px;
-	width: 700px;
+	max-width: 220px;
 }
 
 #story-background {
