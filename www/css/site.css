@@ -40,6 +40,9 @@ body {
 .modal-trigger {
 	cursor: pointer;
 }
+.modal-content {
+	background-color: #fff;
+}
 
 /* Individual elements */
 #rsvp-elephant {
@@ -97,6 +100,14 @@ body {
 #location-map-button {
 	left: 1550px;
 	top: 1625px;
+	height: auto;
+	max-width: 256px;
+}
+#location-calendar-button {
+	left: 1300px;
+	top: 1640px;
+	height: auto;
+	max-width: 200px;
 }
 #location_map_modal {
 	top:2000px;
@@ -157,27 +168,12 @@ body {
 	width:1900px;
 	height: 1300px;
 }
-
-/*
-.level1 {
-
-	left:100px;
-	z-index:1500;
-	position: absolute;
-	width:60%;
-}
-.level2 {
+#honeymoon-title {
+	top: 4600px;
 	left:50px;
-	height:1500px;
-	z-index: 1000;
-	background-image:url("http://www.transparenttextures.com/patterns/argyle.png");
-	position: absolute;
-	width:60%;
 }
-.level3 {
-	height:1500px;
-	z-index: 500;
-	background-image:url("http://www.transparenttextures.com/patterns/black-thread.png");
-	position: absolute;
-	width:60%;
-}*/
+#honeymoon-help {
+	top: 5400px;
+	left:50px;
+}
+

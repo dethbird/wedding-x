@@ -15,11 +15,11 @@
             data-parallax-id="space" 
             id="honeymoon-background"
             data-x-variance="100"
-            data-y-variance="35"
+            data-y-variance="30"
             data-direction="-1"
             src="/img/honeymoon.background.jpg" 
         />
-        <img class="object z-background01 parallax"
+        <img class="object z-background01 parallax modal-trigger"
             data-parallax-id="space"
             data-x-variance="250"
             data-y-variance="20"
@@ -27,6 +27,7 @@
             id="honeymoon-spaceship"
             src="/img/honemoon.spaceship.png"
         />
+        <img class="object z-characters" id="honeymoon-title" src="/img/honeymoon.title.png" />
         <div class="object z-characters parallax-detector" data-parallax-id="space" id="honeymoon-parallax-detector"></div>
 
         <img class="object z-background" id="location-background" src="/img/location.background-color.png" />
@@ -65,7 +66,8 @@
         <!-- section: location -->
         <img class="object z-characters" id="location-door-arrow" src="/img/location.door-arrow.png" />
         <img class="object z-characters" id="location-green-door" src="/img/location.green-door.png" />
-        <img class="object z-characters modal-trigger" data-modal-id="location_map_modal" id="location-map-button" src="http://icons.iconarchive.com/icons/thiago-silva/palm/256/Google-Maps-icon.png" />
+        <img class="object z-characters modal-trigger" data-modal-id="location_map_modal" id="location-map-button" src="/img/location.map.png" />
+        <img class="object z-characters modal-trigger" data-modal-id="location_calendar_modal" id="location-calendar-button" src="/img/location.calendar.png" />
 
 
 
@@ -97,7 +99,7 @@
         <img class="object z-characters" id="story-marryme" src="/img/story.marryme.png" />
         
         <!-- section: honeymoon -->
-
+        <img class="object z-characters modal-trigger" id="honeymoon-help" src="/img/honeymoon.help.png" />
 
         <!-- MODALS -->
         <div class="z-modal" id="rsvp_modal" data-window-scale="0.8">
@@ -110,6 +112,23 @@
             <br class="clearfix"/>
             <iframe width="600" height="450" frameborder="0" style="border:0"
     src="https://www.google.com/maps/embed/v1/place?q=Hudson+New+York,+West+58th+Street,+New+York,+NY,+United+States&key=AIzaSyBhVOFcoL36qVm9ETAcMfaQOC2bdMuIgnQ"></iframe>
+        </div>
+
+        <div class="z-modal" id="location_calendar_modal" data-window-scale="0.7">
+            <img class="modal-close" data-modal-id="location_calendar_modal" src="/img/close-button.png" />
+            <br class="clearfix"/>
+            <div class='modal-content'>
+                <h2>Saturday May 23rd, 2015</h2>
+                <h4>405 E. 6th St., Apt 1. NYC 10009</h4>
+                    <blockquote><h3>7pm</h3>festivities, music, food, holi colors</blockquote>
+                <h2>Sunday May 24th, 2015</h2>
+                <h4>Hudson Hotel</h4>
+                    <blockquote><h3>5:30pm</h3>cocktail hour</blockquote>
+                    <blockquote><h3>6:30pm</h3>ceremony</blockquote>
+                    <blockquote><h3>7:30pm</h3>dinner</blockquote>
+                    <blockquote><h3>9:30pm</h3>dancing</blockquote>
+                    <blockquote><h3>11:00pm</h3>arcade club</blockquote>
+            </div>
         </div>
     </div>
 
