@@ -333,6 +333,7 @@ $(window).load(function(){
     });
 
     // update scale on window resize
+    $('.loader').hide();
     rescale();
     w.resize(function(){
         rescale();

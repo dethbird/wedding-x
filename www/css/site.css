@@ -44,6 +44,12 @@ body {
 	background-color: #fff;
 }
 
+#loading {
+	position:absolute;
+	left: 50%;
+	top: 50%;
+}
+
 /* Individual elements */
 #rsvp-elephant {
 	top: 660px;
@@ -86,7 +92,7 @@ body {
 	top: 1525px;
 }
 #location-layout {
-	left: 500px;
+	left: 275px;
 	top: 1800px;
 }
 #location-green-door {
