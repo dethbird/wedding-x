@@ -1,215 +1,219 @@
 body {
-	background-color:#ff9c00;
-	cursor: crosshair;
+    background-color:#ff9c00;
+    cursor: crosshair;
 }
 
 .outer {
-	position:absolute;
-	overflow:hidden;
-	background-color:#ff9c00;
+    position:absolute;
+    overflow:hidden;
+    background-color:#ff9c00;
 }
 
 /* Layout */
 .object {
-	position:absolute;
+    position:absolute;
 }
 .z-background {
-	z-index:1000;
-	top: 240px;
+    z-index:1000;
+    top: 240px;
 }
 .z-background {
-	z-index:990;
-	top: 240px;
+    z-index:990;
+    top: 240px;
 }
 .z-characters {
-	z-index:1500;
+    z-index:1500;
 }
 .z-modal {
-	position:absolute;
-	z-index:5000;
+    position:absolute;
+    z-index:5000;
 }
 .load-hide {
-	display:none;
-	visibility: hidden;
+    display:none;
+    visibility: hidden;
 }
 .modal-close {
-	width:50px;
-	height:50px;
-	cursor: pointer;
+    width:50px;
+    height:50px;
+    cursor: pointer;
 }
 .modal-trigger {
-	cursor: pointer;
+    cursor: pointer;
 }
 .modal-content {
-	background-color: #fff;
-	padding:10px;
+    background-color: #fff;
+    padding:10px;
 }
 
 #loading {
-	position:absolute;
-	left: 50%;
-	top: 50%;
+    position:absolute;
+    left: 50%;
+    top: 50%;
 }
 
 /* Individual elements */
 #rsvp-elephant {
-	top: 660px;
-	left: 50px;
+    top: 660px;
+    left: 50px;
+}
+#rsvp-prutha {
+    top: 520px;
+    left: 180px;
 }
 #rsvp-coming {
-	top: 10px;
-	left: 200px;
+    top: 10px;
+    left: 200px;
 }
 #rsvp-no {
-	top: 718px;
-	left: 850px;
-	cursor: pointer;
+    top: 718px;
+    left: 850px;
+    cursor: pointer;
 }
 #rsvp-yes {
-	top: 710px;
-	left: 1070px;
-	cursor: pointer;
+    top: 710px;
+    left: 1070px;
+    cursor: pointer;
 }
 #rsvp-model {
-	top: 1000px;
-	left: 1400px;
+    top: 1000px;
+    left: 1400px;
 }
 #rsvp-mouse {
-	top: 1150px;
-	left: 500px;
+    top: 1150px;
+    left: 500px;
 }
 #rsvp-rotating-star {
-	top: -200px;
-	left: 100px;
+    top: -200px;
+    left: 100px;
 }
 #rsvp_modal {
-	top:250px;
-	left:450px;
-	height: 820px;
-	width: 780px;
+    top:250px;
+    left:450px;
+    height: 820px;
+    width: 780px;
 }
 
 #location-background {
-	top: 1525px;
+    top: 1525px;
 }
 #location-layout {
-	left: 0px;
-	top: 1750px;
+    left: 0px;
+    top: 1750px;
 }
 #location-celebration-button {
-	left: 950px;
-	top: 1800px;
-	max-width: 320px;
-	height:auto;
+    left: 950px;
+    top: 1800px;
+    max-width: 320px;
+    height:auto;
 }
 #location-ceremony-button {
-	left: 1450px;
-	top: 2600px;
-	max-width: 300px;
-	height:auto;
+    left: 1450px;
+    top: 2600px;
+    max-width: 300px;
+    height:auto;
 }
 #location-location-button {
-	left: 450px;
-	top: 2950px;
-	max-width: 280px;
-	height:auto;
+    left: 450px;
+    top: 2950px;
+    max-width: 280px;
+    height:auto;
 }
 /*#location-green-door {
-	left: 50px;
-	top: 1900px;
+    left: 50px;
+    top: 1900px;
 }
 #location-door-arrow {
-	left: 100px;
-	top: 2450px;
+    left: 100px;
+    top: 2450px;
 }
 #location-map-button {
-	left: 1550px;
-	top: 2950px;
-	height: auto;
-	max-width: 256px;
+    left: 1550px;
+    top: 2950px;
+    height: auto;
+    max-width: 256px;
 }
 #location-calendar-button {
-	left: 1300px;
-	top: 2900px;
-	height: auto;
-	max-width: 220px;
+    left: 1300px;
+    top: 2900px;
+    height: auto;
+    max-width: 220px;
 }*/
 #location_celebration_modal {
-	left: 950px;
-	top: 1800px;
+    left: 950px;
+    top: 1800px;
 }
 #location_ceremony_modal {
-	top: 2400px;
-	left: 900px;
+    top: 2400px;
+    left: 900px;
 }
 #location_location_modal {
-	top: 2550px;
-	left: 500px;	
+    top: 2550px;
+    left: 500px;    
 }
 
 
 #story-background {
-	top: 2900px;
+    top: 2900px;
 }
 #story-title {
-	left: 150px;
-	top: 3200px;
-	-webkit-transform: rotate(15deg);
-	-moz-transform': rotate(15deg);
-	-ms-transform': rotate(15deg);
-	-o-transform': rotate(15deg);
+    left: 150px;
+    top: 3200px;
+    -webkit-transform: rotate(15deg);
+    -moz-transform': rotate(15deg);
+    -ms-transform': rotate(15deg);
+    -o-transform': rotate(15deg);
 }
 #story-shikari {
-	left: 1350px;
-	top: 3400px;
+    left: 1350px;
+    top: 3400px;
 }
 #story-amulgirl {
-	left: 50px;
-	top: 3600px;
+    left: 50px;
+    top: 3600px;
 }
 #story-buttering {
-	left: 750px;
-	top: 4200px;
+    left: 750px;
+    top: 4200px;
 
-	-webkit-transform: rotate(7deg);
-	-moz-transform': rotate(7deg);
-	-ms-transform': rotate(7deg);
-	-o-transform': rotate(7deg);	
+    -webkit-transform: rotate(7deg);
+    -moz-transform': rotate(7deg);
+    -ms-transform': rotate(7deg);
+    -o-transform': rotate(7deg);    
 }
 #story-marryme {
-	left: 520px;
-	top: 3610px;
+    left: 520px;
+    top: 3610px;
 
-	-webkit-transform: rotate(-4deg);
-	-moz-transform': rotate(-4deg);
-	-ms-transform': rotate(-4deg);
-	-o-transform': rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+    -moz-transform': rotate(-4deg);
+    -ms-transform': rotate(-4deg);
+    -o-transform': rotate(-4deg);
 }
 
 #honeymoon-background {
-	top: 4450px;
-	left:100px;
+    top: 4450px;
+    left:100px;
 }
 #honeymoon-spaceship {
-	left: 660px;
-	top: 5160px;
+    left: 660px;
+    top: 5160px;
 }
 #honeymoon-parallax-detector {
-	top: 4450px;
-	left: 0px;
-	width:1900px;
-	height: 1300px;
+    top: 4450px;
+    left: 0px;
+    width:1900px;
+    height: 1300px;
 }
 #honeymoon-title {
-	top: 4600px;
-	left:50px;
+    top: 4600px;
+    left:50px;
 }
 #honeymoon-help {
-	top: 5400px;
-	left:50px;
+    top: 5400px;
+    left:50px;
 }
 #honeymoon_modal {
-	top: 5200px;
-	left: 150px;
+    top: 5200px;
+    left: 150px;
 }
 
