@@ -318,7 +318,6 @@ $(window).load(function(){
                 rescale(r);
                 modal.css('left', 5);
             }
-            
             modal.show();
         });
     });

@@ -93,10 +93,28 @@ body {
 	top: 1525px;
 }
 #location-layout {
-	left: 275px;
-	top: 1800px;
+	left: 0px;
+	top: 1750px;
 }
-#location-green-door {
+#location-celebration-button {
+	left: 950px;
+	top: 1800px;
+	max-width: 320px;
+	height:auto;
+}
+#location-ceremony-button {
+	left: 1450px;
+	top: 2600px;
+	max-width: 300px;
+	height:auto;
+}
+#location-location-button {
+	left: 450px;
+	top: 2950px;
+	max-width: 280px;
+	height:auto;
+}
+/*#location-green-door {
 	left: 50px;
 	top: 1900px;
 }
@@ -115,14 +133,18 @@ body {
 	top: 2900px;
 	height: auto;
 	max-width: 220px;
+}*/
+#location_celebration_modal {
+	left: 950px;
+	top: 1800px;
 }
-#location_calendar_modal {
+#location_ceremony_modal {
 	top: 2400px;
-	left: 800px;
+	left: 900px;
 }
-#location_map_modal {
+#location_location_modal {
 	top: 2550px;
-	left: 800px;	
+	left: 500px;	
 }
 
 
