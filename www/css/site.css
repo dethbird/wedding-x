@@ -42,6 +42,7 @@ body {
 }
 .modal-content {
 	background-color: #fff;
+	padding:10px;
 }
 
 #loading {
@@ -115,6 +116,15 @@ body {
 	height: auto;
 	max-width: 220px;
 }
+#location_calendar_modal {
+	top: 2400px;
+	left: 800px;
+}
+#location_map_modal {
+	top: 2550px;
+	left: 800px;	
+}
+
 
 #story-background {
 	top: 2900px;
@@ -175,5 +185,9 @@ body {
 #honeymoon-help {
 	top: 5400px;
 	left:50px;
+}
+#honeymoon_modal {
+	top: 5200px;
+	left: 150px;
 }
 

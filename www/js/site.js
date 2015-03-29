@@ -313,8 +313,13 @@ $(window).load(function(){
         btn = $(btn);
         btn.on('click', function(e){
             var modal = $('#' + $(e.target).data('modal-id'));
+            var r = (modal.width() + 30) / configs.container.width;
+            if(scale < r && r < 1){
+                rescale(r);
+                modal.css('left', 5);
+            }
+            
             modal.show();
-            rescale(modal.attr('data-window-scale'));
         });
     });
     $('.modal-close').each(function(i,btn){
