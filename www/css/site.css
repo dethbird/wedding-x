@@ -17,10 +17,6 @@ body {
     z-index:1000;
     top: 240px;
 }
-.z-background {
-    z-index:990;
-    top: 240px;
-}
 .z-characters {
     z-index:1500;
 }
@@ -53,16 +49,16 @@ body {
 
 /* Individual elements */
 #rsvp-elephant {
-    top: 660px;
+    top: 715px;
     left: 50px;
 }
 #rsvp-prutha {
-    top: 520px;
-    left: 180px;
+    top: 500px;
+    left: 310px;
 }
 #rsvp-rishi {
-    top: 830px;
-    left: 1400px;
+    top: 915px;
+    left: 1030px;
 }
 #rsvp-coming {
     top: 10px;
@@ -79,8 +75,8 @@ body {
     cursor: pointer;
 }
 #rsvp-model {
-    top: 1000px;
-    left: 1400px;
+    top: 940px;
+    left: 1390px;
 }
 #rsvp-mouse {
     top: 1150px;
@@ -95,6 +91,9 @@ body {
     left:450px;
     height: 820px;
     width: 780px;
+}
+#rsvp-background-colors {
+    top:0px;
 }
 
 #location-background {
