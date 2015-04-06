@@ -100,47 +100,33 @@ body {
     top: 1525px;
 }
 #location-layout {
-    left: 0px;
-    top: 1750px;
+    left: 15px;
+    top: 1650px;
 }
 #location-celebration-button {
-    left: 950px;
-    top: 1800px;
-    max-width: 320px;
-    height:auto;
+    left: 1450px;
+    top: 1650px;
+}
+#location-celebration-subtext {
+    left: 1500px;
+    top: 1740px;
 }
 #location-ceremony-button {
-    left: 1450px;
-    top: 2600px;
-    max-width: 300px;
-    height:auto;
+    left: 1480px;
+    top: 2490px;
+}
+#location-ceremony-subtext {
+    left: 1530px;
+    top: 2580px;
 }
 #location-location-button {
-    left: 450px;
-    top: 2950px;
-    max-width: 280px;
-    height:auto;
+    left: 620px;
+    top: 2890px;
 }
-/*#location-green-door {
-    left: 50px;
-    top: 1900px;
+#location-location-subtext {
+    left: 670px;
+    top: 3000px;
 }
-#location-door-arrow {
-    left: 100px;
-    top: 2450px;
-}
-#location-map-button {
-    left: 1550px;
-    top: 2950px;
-    height: auto;
-    max-width: 256px;
-}
-#location-calendar-button {
-    left: 1300px;
-    top: 2900px;
-    height: auto;
-    max-width: 220px;
-}*/
 #location_celebration_modal {
     left: 950px;
     top: 1800px;
