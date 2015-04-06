@@ -201,6 +201,9 @@ body {
     display:inline;
     position: absolute;
 }
+.story-gallery-caption {
+    color: #fff;
+}
 
 .modal-content.story {
     background
