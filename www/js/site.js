@@ -2,10 +2,176 @@ var configs = {
     container: { 
         width: 1900,
         height: 5750
-    }
+    },
+    storyGallery: [
+        {
+            image: "1_ day 2 of our 4 day long first date.jpg",
+            caption: "day 2 of our 4 day long first date"
+        },
+        {
+            image: "2_ Our second meeting_ Aug 2013 in chicago.jpg",
+            caption: "Our second meeting Aug 2013 in chicago"
+        },
+        {
+            image: "3_Dec 2013_Upstate NY.jpg",
+            caption: "Dec 2013_Upstate NY"
+        },
+        {
+            image: "4.5_ Cannnon NY, Winter 2013.jpg",
+            caption: "Cannnon NY, Winter 2013"
+        },
+        {
+            image: "4_Holi 2013 in NYC.jpg",
+            caption: "Holi 2013 in NYC"
+        },
+        {
+            image: "5_Hanging with Mon and Veej in Fi-Di_Dec 2013.jpg",
+            caption: "Hanging with Mon and Veej in Fi-Di_Dec 2013"
+        },
+        {
+            image: "6_Trip to Beacon Dec 2013.jpg",
+            caption: "Trip to Beacon Dec 2013"
+        },
+        {
+            image: "7_With Baby Sakshi.jpg",
+            caption: "With Baby Sakshi"
+        },
+        {
+            image: "8_Rachna's bday 2013.jpg",
+            caption: "Rachna's bday 2013"
+        },
+        {
+            image: "9_NYE 2013.jpg",
+            caption: "NYE 2013"
+        },
+        {
+            image: "10_New Years Eve 2014_Blissfully happy. Not drunk ;).jpg",
+            caption: "New Years Eve 2014_Blissfully happy. Not drunk ;)"
+        },
+        {
+            image: "11_Welcoming 2014 with a bunch of our closest friends. nyc.jpg",
+            caption: "Welcoming 2014 with a bunch of our closest friends. nyc"
+        },
+        {
+            image: "12_ Couples Beauty regiment.jpg",
+            caption: "Couples Beauty regiment"
+        },
+        {
+            image: "13_ Sprin 2014_drawing on each others hands to pass time on the train ride to astoria.jpg",
+            caption: "Spring 2014 drawing on each others hands to pass time on the train ride to astoria"
+        },
+        {
+            image: "14_Courthouse.jpg",
+            caption: "Courthouse"
+        },
+        {
+            image: "15_ Our first poloriod pics together_ Pilly_Summer of 2014.jpg",
+            caption: "Our first poloriod pics together Philly Summer of 2014"
+        },
+        {
+            image: "16_Ring fling for Shraddha on spyke.jpg",
+            caption: "Ring fling for Shraddha on spyke"
+        },
+        {
+            image: "17.5_ Pic by the one and only Alison Wynn when visiting us from Paris_Jun 2014.jpg",
+            caption: "Pic by the one and only Alison Wynn when visiting us from Paris_Jun 2014"
+        },
+        {
+            image: "17_ June 2014_Randall's Island Beach.jpg",
+            caption: "June 2014_Randall's Island Beach"
+        },
+        {
+            image: "18.5_ Napkin sketchs are how we express our emotions.jpg",
+            caption: "Napkin sketchs are how we express our emotions"
+        },
+        {
+            image: "18_Meeting baby Trishna.JPG",
+            caption: "Meeting baby Trishna"
+        },
+        {
+            image: "19.5_ Prutha's Bday 2014 at a Drag club.JPG",
+            caption: "Meeting baby Trishna"
+        },
+        {
+            image: "19.6_ First Thanks giving dinner at our place.JPG",
+            caption: "First Thanksgiving dinner at our place"
+        },
+        {
+            image: "19.7_ Thanksgiving 2014 with the nieces.JPG",
+            caption: "First Thanksgiving dinner at our place"
+        },
+        {
+            image: "19_ At the Satsangi family Diwali Rave.JPG",
+            caption: "At the Satsangi family Diwali Rave"
+        },
+        {
+            image: "20_ Diwali 2014 in North Carolina with Rishi's cousins and sister.jpg",
+            caption: "Diwali 2014 in North Carolina with Rishi's cousins and sister"
+        },
+        {
+            image: "21_ Walking along side each other for a cause. Hands up Dont shoot.jpg",
+            caption: "Walking along side each other for a cause. Hands up Dont shoot"
+        },
+        {
+            image: "22_ Our New Bed.jpg",
+            caption: "Our New Bed"
+        },
+        {
+            image: "23_ Our new Deck. Yup, everyones Invited.jpg",
+            caption: "Our new Deck. Yup, everyones Invited"
+        },
+        {
+            image: "24.5_ xmas at rama's 2014.jpg",
+            caption: "xmas at rama's 2014"
+        },
+        {
+            image: "24_Jaipur Jan 2015.jpg",
+            caption: "Jaipur Jan 2015"
+        },
+        {
+            image: "25_ Raithathas meet Satsangis_Jaipur_Dec 2014.jpg",
+            caption: "Raithathas meet Satsangis Jaipur Dec 2014"
+        },
+        {
+            image: "26_ At the original lovers point Bandstand_Bandra.jpg",
+            caption: "At the original lovers point Bandstand_Bandra"
+        },
+        {
+            image: "27_ hanging with prutha's college buddies in mumbai.jpg",
+            caption: "hanging with prutha's college buddies in mumbai"
+        },
+        {
+            image: "28.5_ Mumbai Dec 2014_With the nephews.jpg",
+            caption: "Mumbai Dec 2014_With the nephews"
+        },
+        {
+            image: "29_ Mazin's wedding in Mumbai - dec 2015.jpg",
+            caption: "Mazin's wedding in Mumbai - dec 2015"
+        },
+        {
+            image: "29_ 70's Disco Party_Feb 2015.JPG",
+            caption: "70's Disco Party_Feb 2015"
+        },
+        {
+            image: "30_ Rama's disco bday_Feb 2015.jpg",
+            caption: "Rama's disco bday_Feb 2015"
+        },
+        {
+            image: "31_ Feb 2015_Maizn's Bday_NYC.JPG",
+            caption: "Feb 2015_Maizn's Bday_NYC"
+        },
+        {
+            image: "32_ Saying farewell to the first apartment we started our NYC journey in.JPG",
+            caption: "Saying farewell to the first apartment we started our NYC journey in"
+        }
+        
+    ]
 }
 
 $(window).load(function(){
+
+    console.log(configs);
+
 
     /**
      * @var $w the window
