@@ -196,6 +196,7 @@ body {
     box-shadow: 0px 10px 20px 6px rgba(0,0,0,0.52);
 }
 .story-gallery-display {
+    top: 50%;
     min-width: 700px;
     height:auto;
     display:inline;
@@ -204,7 +205,10 @@ body {
 .story-gallery-caption {
     color: #fff;
 }
-
+.story-gallery-image img {
+    max-width: 700px;
+    max-height: 700px;
+}
 .modal-content.story {
     background
 }

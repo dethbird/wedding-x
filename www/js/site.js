@@ -61,7 +61,7 @@ var configs = {
             caption: "Spring 2014 drawing on each others hands to pass time on the train ride to astoria"
         },
         {
-            image: "/img/story-gallery/14_Courthouse.jpg",
+            image: "/img/story-gallery/14_Courthouse.JPG",
             caption: "Courthouse"
         },
         {
@@ -69,7 +69,7 @@ var configs = {
             caption: "Our first poloriod pics together Philly Summer of 2014"
         },
         {
-            image: "/img/story-gallery/16_Ring fling for Shraddha on spyke.jpg",
+            image: "/img/story-gallery/16_Ring fling for Shraddha on spyke.JPG",
             caption: "Ring fling for Shraddha on spyke"
         },
         {
@@ -85,20 +85,20 @@ var configs = {
             caption: "Napkin sketchs are how we express our emotions"
         },
         {
-            image: "/img/story-gallery/18_Meeting baby Trishna.JPG",
+            image: "/img/story-gallery/18_Meeting baby Trishna.jpg",
             caption: "Meeting baby Trishna"
         },
         {
-            image: "/img/story-gallery/19.5_ Prutha's Bday 2014 at a Drag club.JPG",
-            caption: "Meeting baby Trishna"
+            image: "/img/story-gallery/19.5_ Prutha's Bday 2014 at a Drag club .JPG",
+            caption: "Prutha's Bday 2014 at a Drag club"
         },
         {
-            image: "/img/story-gallery/19.6_ First Thanks giving dinner at our place.JPG",
+            image: "/img/story-gallery/19.6_ First Thanks giving dinner at our place .JPG",
             caption: "First Thanksgiving dinner at our place"
         },
         {
             image: "/img/story-gallery/19.7_ Thanksgiving 2014 with the nieces.JPG",
-            caption: "First Thanksgiving dinner at our place"
+            caption: "Thanksgiving 2014 with the nieces"
         },
         {
             image: "/img/story-gallery/19_ At the Satsangi family Diwali Rave.JPG",
@@ -109,7 +109,7 @@ var configs = {
             caption: "Diwali 2014 in North Carolina with Rishi's cousins and sister"
         },
         {
-            image: "/img/story-gallery/21_ Walking along side each other for a cause. Hands up Dont shoot.jpg",
+            image: "/img/story-gallery/21_ Walking along side each other for a cause. Hands up Dont shoot .jpg",
             caption: "Walking along side each other for a cause. Hands up Dont shoot"
         },
         {
@@ -145,7 +145,7 @@ var configs = {
             caption: "Mumbai Dec 2014_With the nephews"
         },
         {
-            image: "/img/story-gallery/29_ Mazin's wedding in Mumbai - dec 2015.jpg",
+            image: "/img/story-gallery/28_ Mazin's wedding in Mumbai - dec 2015.jpg",
             caption: "Mazin's wedding in Mumbai - dec 2015"
         },
         {
@@ -161,7 +161,7 @@ var configs = {
             caption: "Feb 2015_Maizn's Bday_NYC"
         },
         {
-            image: "/img/story-gallery/32_ Saying farewell to the first apartment we started our NYC journey in.JPG",
+            image: "/img/story-gallery/32_ Saying farewell to the first apartment we started our NYC journey in.jpg",
             caption: "Saying farewell to the first apartment we started our NYC journey in"
         }
         
@@ -195,13 +195,22 @@ _.extend(Gallery.prototype,{
         img.attr('src', this.items[this.currentIndex].image);
 
         img.load(function(){
+            
             $(that.el).find('.story-gallery-image').html(img);
             $(that.el).find('.story-gallery-caption').html(caption);
+
+            that.changeTimeout = setTimeout(
+                function() {
+                    that.next();
+                },
+                5000
+            );
+
         });
         
         // update the index
         this.currentIndex++;
-        if(this.currentIndex > this.items.length) {
+        if(this.currentIndex == this.items.length) {
             this.currentIndex = 0;
         }
     }
