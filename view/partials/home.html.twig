@@ -83,11 +83,12 @@
 
 
         <!-- section: story -->     
-        <img class="object z-characters" id="story-title" src="/img/story.title.png" />
+        <img class="object z-characters swap modal-trigger" id="story-title" data-modal-id="story_gallery_modal" src="/img/story.title.png" />
+        <img class="object z-characters load-hide modal-trigger" id="story-title-swap" data-modal-id="story_gallery_modal" src="/img/story.title.swap.png" />
         
         <!-- shikar -->
         <img class="object z-characters replicate modal-trigger" 
-            data-count="12"
+            data-count="7"
             data-direction-left="-1"
             data-x-distance="1200"
             data-direction-top="1"
@@ -97,7 +98,7 @@
         />
 
         <img class="object z-characters replicate modal-trigger"
-            data-count="12"
+            data-count="7"
             data-direction-left="1"
             data-x-distance="1150"
             data-direction-top="1"
@@ -153,6 +154,18 @@
                     <blockquote><h3>7:30pm</h3>dinner</blockquote>
                     <blockquote><h3>9:30pm</h3>dancing</blockquote>
                     <blockquote><h3>11:00pm</h3>arcade club</blockquote>
+            </div>
+        </div>
+
+        <div class="z-modal" id="story_gallery_modal">
+            <img class="modal-close" data-modal-id="story_gallery_modal" src="/img/close-button.png" />
+            <br class="clearfix"/>
+            <div class="story-gallery">
+                <img src="/img/story-gallery/story-gallery-background.gif" class="story-gallery-background" />
+                <div class="story-gallery-display">
+                    <div id="story-gallery-image">image</div>
+                    <div id="story-gallery-caption">caption</div>
+                </div>
             </div>
         </div>
 

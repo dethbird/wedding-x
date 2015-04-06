@@ -37,6 +37,7 @@ body {
     cursor: pointer;
 }
 .modal-content {
+    display: block;
     background-color: #fff;
     padding:10px;
 }
@@ -145,12 +146,12 @@ body {
     top: 2900px;
 }
 #story-title {
-    left: 150px;
-    top: 3200px;
-    -webkit-transform: rotate(15deg);
-    -moz-transform': rotate(15deg);
-    -ms-transform': rotate(15deg);
-    -o-transform': rotate(15deg);
+    left: 50px;
+    top: 3350px;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform': rotate(-15deg);
+    -ms-transform': rotate(-15deg);
+    -o-transform': rotate(-15deg);
 }
 #story-shikari {
     left: 1350px;
@@ -177,6 +178,29 @@ body {
     -moz-transform': rotate(-4deg);
     -ms-transform': rotate(-4deg);
     -o-transform': rotate(-4deg);
+}
+#story_gallery_modal {
+    top: 3350px;
+    left: 50px;
+}
+.story-gallery {
+    text-align:center;
+}
+.story-gallery-background {
+    min-width: 700px;
+    height:auto;
+    display:block;
+    position: absolute;
+}
+.story-gallery-display {
+    min-width: 700px;
+    height:auto;
+    display:inline;
+    position: absolute;
+}
+
+.modal-content.story {
+    background
 }
 
 #honeymoon-background {
