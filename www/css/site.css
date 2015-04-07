@@ -196,18 +196,20 @@ body {
     box-shadow: 0px 10px 20px 6px rgba(0,0,0,0.52);
 }
 .story-gallery-display {
-    top: 50%;
     min-width: 700px;
     height:auto;
-    display:inline;
     position: absolute;
 }
 .story-gallery-caption {
-    color: #fff;
+    color: #333;
+    padding:5px;
+    max-width:640px;
+    max-height:640px;
+    display:inline;
 }
 .story-gallery-image img {
-    max-width: 700px;
-    max-height: 700px;
+    max-width: 640px;
+    max-height: 640px;
 }
 .modal-content.story {
     background

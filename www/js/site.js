@@ -187,6 +187,12 @@ _.extend(Gallery.prototype,{
     init: function() {
         this.next();    
     },
+    resize: function() {
+        var compareSize = $(this.el).find('.story-gallery-background');
+        var container = $(this.el).find('.story-gallery-display');
+
+        container.css('top', Math.floor((compareSize.height() - container.height())/2) + 50 );
+    },
     next: function() {
         var that = this;
         
@@ -198,6 +204,8 @@ _.extend(Gallery.prototype,{
             
             $(that.el).find('.story-gallery-image').html(img);
             $(that.el).find('.story-gallery-caption').html(caption);
+
+            that.resize();
 
             that.changeTimeout = setTimeout(
                 function() {
@@ -397,8 +405,8 @@ $(window).load(function(){
     var shimmerMyChildren = function (object) {
         var repeatTimeline = new TimelineMax({repeat:-1});
         
-        repeatTimeline.add(TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 0, ease: Power0.easeNone, yoyo: true}, .1));
-        repeatTimeline.add(TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 1, ease: Power0.easeNone, yoyo: true}, .1));
+        repeatTimeline.add(TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 0, ease: Power0.easeNone, yoyo: true}, .3));
+        repeatTimeline.add(TweenMax.staggerTo($('.replicate-child[data-parent-id="' + object.attr('id') + '"]'), 1, {opacity: 1, ease: Power0.easeNone, yoyo: true}, .3));
 
     }
 
