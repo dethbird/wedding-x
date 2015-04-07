@@ -211,13 +211,10 @@ body {
     max-width: 640px;
     max-height: 640px;
 }
-.modal-content.story {
-    background
-}
 
 #honeymoon-background {
     top: 4450px;
-    left:100px;
+    left:0px;
 }
 #honeymoon-spaceship {
     left: 660px;

@@ -510,8 +510,9 @@ $(window).load(function(){
                 var yPos = (e.pageY - pos.top) - object.height()/2;
                 $('.parallax[data-parallax-id="' + object.data('parallax-id') + '"]').each(function(i,parallax){
                     parallax = $(parallax);
+                    var xShift = parallax.data('x-shift')===undefined ? 0 : parallax.data('x-shift');
                     parallax.css ({
-                        left: ((parallax.data('left') * scale) + ((xPos/object.width()) * parallax.data('x-variance')*scale)) * parallax.data('direction'),
+                        left: ((parallax.data('left') * scale) + ((xPos/object.width()) * parallax.data('x-variance')*scale)) * parallax.data('direction') + xShift,
                         top: (parallax.data('top') * scale) + (yPos/(object.height()/2) * parallax.data('y-variance') * scale * parallax.data('direction'))
                     });
                 });
@@ -529,6 +530,7 @@ $(window).load(function(){
 
 
     });
+
 
     $('.z-modal').each(function(i,modal){
         modal = $(modal);
