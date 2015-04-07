@@ -187,6 +187,9 @@ _.extend(Gallery.prototype,{
     init: function() {
         this.next();    
     },
+    stop: function() {
+        clearTimeout(this.changeTimeout);
+    },
     resize: function() {
         var compareSize = $(this.el).find('.story-gallery-background');
         var container = $(this.el).find('.story-gallery-display');
@@ -211,7 +214,7 @@ _.extend(Gallery.prototype,{
                 function() {
                     that.next();
                 },
-                5000
+                3000
             );
 
         });
@@ -227,14 +230,6 @@ _.extend(Gallery.prototype,{
 
 
 $(window).load(function(){
-    var gallery = new Gallery({
-        el: '#story-gallery',
-        items: configs.storyGallery
-    });
-    gallery.init();
-    // console.log(gallery);
-    // console.log(configs);
-
 
     /**
      * @var $w the window
@@ -255,6 +250,11 @@ $(window).load(function(){
      * @var $timelines array of animation timelines
      */
     var timelines = [];
+
+    var gallery = new Gallery({
+        el: '#story-gallery',
+        items: configs.storyGallery
+    });
 
     // functions
     var rescale = function(_scale){
@@ -557,6 +557,13 @@ $(window).load(function(){
             modal.hide();
             rescale();
         });
+    });
+
+    $('.story-gallery-trigger').on('click', function(e){
+        gallery.init();
+    });
+    $('.story-gallery-close').on('click', function(e){
+        gallery.stop();
     });
 
     $(document).keyup(function(e){
