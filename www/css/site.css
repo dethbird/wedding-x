@@ -218,7 +218,7 @@ body {
 }
 #honeymoon-spaceship {
     left: 660px;
-    top: 5160px;
+    top: 5100px;
 }
 #honeymoon-parallax-detector {
     top: 4450px;
@@ -231,11 +231,11 @@ body {
     left:50px;
 }
 #honeymoon-help {
-    top: 5400px;
-    left:50px;
+    top: 4700px;
+    left:75px;
 }
 #honeymoon_modal {
-    top: 5200px;
-    left: 150px;
+    top: 4700px;
+    left: 75px;
 }
 
