@@ -54,7 +54,36 @@ body {
     left: 50%;
     top: 50%;
 }
-
+a.prev {
+    display: block;
+    background-image: url('/img/prev-next.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left:-35px;
+    cursor: pointer;
+}
+a.prev:hover, a.prev:active {
+    background-position: 0px -70px;
+    cursor: pointer;
+}
+a.next {
+    display: block;
+    background-image: url('/img/prev-next.png');
+    background-repeat: no-repeat;
+    background-position: -70px 0px;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left:668px;
+    cursor: pointer;
+}
+a.next:hover, a.next:active {
+    background-position: -70px -70px;
+    cursor: pointer;
+}
 /* Individual elements */
 #rsvp-elephant {
     top: 715px;
@@ -152,6 +181,7 @@ body {
     background-image: url("/img/location.location.background.jpg");
     min-width:1150px;
     min-height: 820px;
+    background-repeat: no-repeat;
 }
 .location-column-1, .location-column-2 {
     width: 575px;
@@ -266,6 +296,10 @@ body {
 .story-gallery-image img {
     max-width: 640px;
     max-height: 640px;
+}
+.story-gallery-nav {
+    position: absolute;
+    top: 375px;
 }
 
 #honeymoon-background {
