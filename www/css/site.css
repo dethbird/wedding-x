@@ -39,7 +39,14 @@ body {
 .modal-content {
     display: block;
     background-color: #fff;
-    padding:10px;
+    padding:15px;
+    margin: 0px;
+    border-style: 4px solid #000;
+}
+.modal-title {
+    font-weight: bold;
+    font-size: 1.6em;
+    padding:20px;
 }
 
 #loading {
@@ -97,6 +104,7 @@ body {
     top:0px;
 }
 
+
 #location-background {
     top: 1525px;
 }
@@ -138,9 +146,57 @@ body {
 }
 #location_location_modal {
     top: 2550px;
-    left: 500px;    
+    left: 50px;    
 }
-
+.location-location-content {
+    background-image: url("/img/location.location.background.jpg");
+    min-width:1150px;
+    min-height: 820px;
+}
+.location-column-1, .location-column-2 {
+    width: 575px;
+    /*border: 1px solid red;*/
+    position: absolute;
+    padding:25px;
+    font-size: 1.1em;
+    top: 0px;
+}
+.location-column-1 {
+    color: #fff;
+    left: 0px;
+}
+.location-column-2 {
+    color: #000;
+    left: 575px;
+    font-size: 1em;
+}
+.location-column-1 table {
+    margin-left: 50px;
+    padding:0px;
+}
+.location-column-1 td.map {
+    height: 75px;
+    vertical-align: bottom;
+}
+.location-column-1 .map a {
+    color: #ff0099;
+    font-weight:bold;
+}
+.location-column-1 td, .location-column-2 td {
+    vertical-align: top;
+    font-size: 1.1em;
+}
+.location-column-2 td {
+    padding-bottom: 5px;
+}
+.location-column-1 td.td-label{
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 150px;
+}
+.location-column-2 td.td-label {
+    width: 150px;
+}
 
 #story-background {
     top: 2900px;
