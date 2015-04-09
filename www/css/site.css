@@ -101,7 +101,7 @@ a.next:hover, a.next:active {
 }
 #rsvp-coming {
     top: 50px;
-    left: 190px;
+    left: 250px;
 }
 #rsvp-no {
     top: 718px;
@@ -127,7 +127,7 @@ a.next:hover, a.next:active {
 }
 #rsvp_modal {
     top: 250px;
-    left: 450px;
+    left: 0px;
     height: 1250px;
     width: 780px;
 }
@@ -177,7 +177,7 @@ a.next:hover, a.next:active {
 }
 #location_location_modal {
     top: 2550px;
-    left: 50px;
+    left: 0px;
     max-width: 680px;
 }
 #location_location_modal .map {
@@ -239,7 +239,7 @@ a.next:hover, a.next:active {
 }
 #story_gallery_modal {
     top: 3350px;
-    left: 50px;
+    left: 0px;
 }
 .story-gallery {
     text-align:center;
@@ -298,6 +298,22 @@ a.next:hover, a.next:active {
 }
 #honeymoon_modal {
     top: 4700px;
-    left: 75px;
+    left: 0px;
 }
-
+.menu {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+}
+#menu_rsvp {
+    left: 14%;
+}
+#menu_location {
+    left: 28%;
+}
+#menu_story {
+    left: 56%;
+}
+#menu_honeymoon {
+    left: 77%;
+}

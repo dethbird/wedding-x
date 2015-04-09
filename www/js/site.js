@@ -3,6 +3,24 @@ var configs = {
         width: 1900,
         height: 5750
     },
+    scrollTo: [
+        {
+            sectionName: "rsvp",
+            top: 0
+        },
+        {
+            sectionName: "location",
+            top: 2200
+        },
+        {
+            sectionName: "story",
+            top: 3200
+        },
+        {
+            sectionName: "honeymoon",
+            top: 4600
+        }
+    ],
     storyGallery: [
         {
             image: "/img/story-gallery/1_ day 2 of our 4 day long first date.jpg",
@@ -569,6 +587,15 @@ $(window).load(function(){
             modal.hide();
             rescale();
         });
+    });
+
+    $('.menu').on('click', function(e){
+        var target = $(e.target);
+        var scrollTo = _.findWhere(configs.scrollTo, {sectionName: target.data('scrollto-id')});
+
+        $('html, body').animate({
+            scrollTop: (scrollTo.top * scale)
+        }, 1000);
     });
 
     $(document).keyup(function(e){
