@@ -333,10 +333,6 @@ a.next:hover, a.next:active {
     top: 4700px;
     left:75px;
 }
-#honeymoon_modal {
-    top: 4700px;
-    left: 0px;
-}
 .menu {
     position: absolute;
     cursor: pointer;
@@ -353,4 +349,15 @@ a.next:hover, a.next:active {
 }
 #menu_honeymoon {
     left: 77%;
+}
+
+#copyright {
+    position:absolute;
+    left: 10px;
+    top: 5655px;
+}
+#copyright_modal {
+    top: 5200px;
+    left: 10px;
+    width: 500px;
 }
