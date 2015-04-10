@@ -244,6 +244,10 @@ a.next:hover, a.next:active {
     -ms-transform': rotate(-15deg);
     -o-transform': rotate(-15deg);
 }
+#story-heart {
+    left: 475px;
+    top: 3500px;    
+}
 #story-shikari {
     left: 1350px;
     top: 3400px;
@@ -272,7 +276,7 @@ a.next:hover, a.next:active {
 }
 #story_gallery_modal {
     top: 3350px;
-    left: 0px;
+    left: 35px;
 }
 .story-gallery {
     text-align:center;
