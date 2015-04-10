@@ -598,6 +598,10 @@ $(window).load(function(){
         }, 1000);
     });
 
+    $('img.anchor').on('click', function(e){
+        $(e.target).parent().trigger('click');
+    });
+
     $(document).keyup(function(e){
         if (e.keyCode == 27) {
             $('.modal-close').trigger('click');

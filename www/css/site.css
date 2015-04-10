@@ -160,12 +160,16 @@ a.next:hover, a.next:active {
     top: 2580px;
 }
 #location-location-button {
-    left: 680px;
-    top: 2950px;
+    left: 860px;
+    top: 2800px;
 }
-#location-location-subtext {
-    left: 670px;
-    top: 3000px;
+#location-location-instagram {
+    left: 910px;
+    top: 2900px;
+}
+#location-location-pics {
+    left: 905px;
+    top: 3050px;
 }
 #location_celebration_modal {
     left: 950px;
