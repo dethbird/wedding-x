@@ -113,8 +113,8 @@
         <img class="object z-characters" id="story-marryme" src="/img/story.marryme.png" />
         
         <!-- section: honeymoon -->
-        <img class="object z-characters swap modal-trigger" data-modal-id="honeymoon_modal" id="honeymoon-help" src="/img/honeymoon.help.png" />
-        <img class="object z-characters load-hide modal-trigger" data-modal-id="honeymoon_modal" id="honeymoon-help-swap" src="/img/honeymoon.help.swap.png" />
+        <a href="http://www.honeyfund.com/wedding/rishiprutha" target="_blank"><img class="object z-characters swap anchor"  id="honeymoon-help" src="/img/honeymoon.help.png" /></a>
+        <a href="http://www.honeyfund.com/wedding/rishiprutha" target="_blank"><img class="object z-characters load-hide anchor" id="honeymoon-help-swap" src="/img/honeymoon.help.swap.png" /></a>
 
         <!-- menu -->
         <img class="object z-characters menu swap scrollto" data-scrollto-id="rsvp" id="menu_rsvp" src="/img/menu.rsvp.png" />
@@ -141,7 +141,8 @@
         <div class="z-modal" id="location_location_modal">
             <img class="modal-close" data-modal-id="location_location_modal" src="/img/close-button.png" /> <span class="modal-title">Where / When</span>
             <br class="clearfix"/>
-            <div class='modal-content'>
+            <div class='modal-content location-location-content'>
+                <div class="location-column-1">
                     <table>
                         <tr>
                             <td class="td-label">VENUE:</td>
@@ -149,22 +150,20 @@
                                 356 W 58th Street<br />
                                 New York, NY 10019<br />
                                 Phone: 212-554-6000<br />
+                                <br />
                             </td>
                         </tr>
                         <tr>
                             <td class="td-label">DATE:</td>
-                            <td>Sunday, May 24, 2015<br /></td>
+                            <td>Sunday, May 24, 2015<br /><br /></td>
                         </tr>
                         <tr>
                             <td class="td-label">TIME:</td>
-                            <td>5.30pm - 10.30pm<br /></td>
+                            <td>5.00pm - 10.30pm<br /><br /></td>
                         </tr>
                         <tr>
-                            <td class="map" colspan="2">
-                                <iframe width="500" height="400" frameborder="0" style="border:0"
--    src="https://www.google.com/maps/embed/v1/place?q=Hudson+New+York,+West+58th+Street,+New+York,+NY,+United+States&key=AIzaSyBhVOFcoL36qVm9ETAcMfaQOC2bdMuIgnQ"></iframe>
-<br />
-                                <a href="https://www.google.com/maps/place/Hudson+New+York/@40.768257,-73.984728,15z/data=!4m2!3m1!1s0x0:0x38efbaf0350d6e5b?sa=X&ei=bqwkVf_aA4LcsAXzooQY&ved=0CLABEPwSMAo" target="_blank">Map</a></td>
+                            <td class="td-label">&nbsp;</td>
+                            <td class="map"><a href="https://www.google.com/maps/place/Hudson+New+York/@40.768257,-73.984728,15z/data=!4m2!3m1!1s0x0:0x38efbaf0350d6e5b?sa=X&ei=bqwkVf_aA4LcsAXzooQY&ved=0CLABEPwSMAo" target="_blank">Map</a></td>
                         </tr>
                         <tr>
                             <td class="td-label">DRESS CODE:</td>
@@ -173,12 +172,17 @@
                                 Experiment!
                             </td>
                         </tr>
+                    </table>
+
+                </div>
+                <div class="location-column-2">
+                    <table>
                         <tr>
-                            <td class="td-label pull-left" colspan="2">EVENTS OF THE DAY:<br /></td>
+                            <td class="td-label" colspan="2">EVENTS OF THE DAY:<br /><br /></td>
                         </tr>
                         <tr>
                             <td class="td-label">5.30PM - 6.00PM:</td>
-                            <td>Ceremony at the Private Park on the 2nd floor behind the reception at the Hudson Hotel<br /></td>
+                            <td>Ceremony will start at 5:30pm sharp at the Private Park on the 2nd floor behind the reception desk. It is an outdoor space.<br /></td>
                         </tr>
                         <tr>
                             <td class="td-label">6.00pm - 7.00pm:</td>
@@ -186,20 +190,22 @@
                         </tr>
                         <tr>
                             <td class="td-label">7.15pm - 8.30pm:</td>
-                            <td>Formal dinner at 24th floor Roof Top Glass tent<br /></td>
+                            <td>Formal seated dinner at 24th floor Roof Top Glass tent<br /></td>
                         </tr>
                         <tr>
                             <td class="td-label">8.30pm - 10.30pm:</td>
-                            <td>Party at the 24th floor Roof Top Glass tent<br /></td>
-                        </tr>                        
-                        <tr>
-                            <td class="td-label pull-left" colspan="2">End of Wedding!<br /></td>
+                            <td>Party at the 24th floor Roof Top Glass tent<br /><br /></td>
+                        </tr>                        <tr>
+                            <td class="td-label" colspan="2">End of Wedding!<br /><br /></td>
                         </tr>
                         <tr>
                             <td class="td-label">10.30pm onwards:</td>
-                            <td>For anyone who might want to continue the party beyond 10.30pm the hotel has a cool club called Half & Half on the 2nd flr.</td>
+                        </tr>
+                        <tr>
+                            <td class="td-label">For anyone who might want to continue the party beyond 10.30pm the hotel has a cool club called Half & Half on the 2nd flr.</td>
                         </tr>
                     </table>
+                </div>
             </div>
         </div>
 
@@ -242,7 +248,7 @@
             </div>
         </div>
 
-        <div class="z-modal" id="honeymoon_modal">
+        <!--<div class="z-modal" id="honeymoon_modal">
             <img class="modal-close" data-modal-id="honeymoon_modal" src="/img/close-button.png" /> <span class="modal-title">Honeymoon / Registry</span>
             <br class="clearfix"/>
             <div class='modal-content'>
@@ -250,7 +256,7 @@
                 
                     <blockquote>You can find our registry <a href="http://www.honeyfund.com/wedding/rishiprutha" target="_blank">here</a>.</blockquote>
             </div>
-        </div>
+        </div>-->
     </div>
 
 {% endblock %}
