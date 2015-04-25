@@ -134,6 +134,12 @@ a.next:hover, a.next:active {
 #rsvp-background-colors {
     top:0px;
 }
+#disqus_modal {
+    top: 0px;
+    left: 0px;
+    height: 800px;
+    width: 500px;
+}
 
 
 #location-background {
@@ -246,7 +252,7 @@ a.next:hover, a.next:active {
 }
 #story-heart {
     left: 175px;
-    top: 3400px;    
+    top: 3400px;
 }
 #story-shikari {
     left: 1350px;
@@ -263,7 +269,7 @@ a.next:hover, a.next:active {
     -webkit-transform: rotate(7deg);
     -moz-transform': rotate(7deg);
     -ms-transform': rotate(7deg);
-    -o-transform': rotate(7deg);    
+    -o-transform': rotate(7deg);
 }
 #story-marryme {
     left: 520px;
@@ -339,16 +345,19 @@ a.next:hover, a.next:active {
     top: 10px;
 }
 #menu_rsvp {
-    left: 14%;
+    left: 8%;
 }
 #menu_location {
-    left: 28%;
+    left: 20%;
 }
 #menu_story {
-    left: 56%;
+    left: 44%;
 }
 #menu_honeymoon {
-    left: 77%;
+    left: 64%;
+}
+#menu_disqus {
+    left: 80%;
 }
 
 #copyright {
