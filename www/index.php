@@ -1,13 +1,13 @@
 <?php
 
 	/**
-	* 
-	*    _____                                 __                
-  	*   /  _  \ ______ ______     ______ _____/  |_ __ ________  
- 	*  /  /_\  \\____ \\____ \   /  ___// __ \   __\  |  \____ \ 
+	*
+	*    _____                                 __
+  	*   /  _  \ ______ ______     ______ _____/  |_ __ ________
+ 	*  /  /_\  \\____ \\____ \   /  ___// __ \   __\  |  \____ \
 	* /    |    \  |_> >  |_> >  \___ \\  ___/|  | |  |  /  |_> >
-	* \____|__  /   __/|   __/  /____  >\___  >__| |____/|   __/ 
-	*         \/|__|   |__|          \/     \/           |__|    
+	* \____|__  /   __/|   __/  /____  >\___  >__| |____/|   __/
+	*         \/|__|   |__|          \/     \/           |__|
 	*/
 	// ini_set('error_reporting', E_ALL);
 	error_reporting(E_ALL);
@@ -25,14 +25,14 @@
 	$siteData = null;
 
 	/**
-	* __________               __                                
-	* \______   \ ____   _____/  |_  __________________  ______  
- 	* |    |  _//  _ \ /  _ \   __\/  ___/\_  __ \__  \ \____ \ 
+	* __________               __
+	* \______   \ ____   _____/  |_  __________________  ______
+ 	* |    |  _//  _ \ /  _ \   __\/  ___/\_  __ \__  \ \____ \
  	* |    |   (  <_> |  <_> )  |  \___ \  |  | \// __ \|  |_> >
- 	* |______  /\____/ \____/|__| /____  > |__|  (____  /   __/ 
-	*         \/                        \/             \/|__|    
+ 	* |______  /\____/ \____/|__| /____  > |__|  (____  /   __/
+	*         \/                        \/             \/|__|
 	*/
-	
+
 	require '../vendor/autoload.php';
 	use Symfony\Component\Yaml\Yaml;
 	use Guzzle\Http\Client;
@@ -81,7 +81,7 @@
 	    public function strip_tags($html)
 	    {
 	        return strip_tags($html);
-	    }	
+	    }
 
 	    public function json_encode($output)
 	    {
@@ -106,20 +106,61 @@
 
 
 	/**
-	* __________               __  .__                
-	* \______   \ ____  __ ___/  |_|__| ____    ____  
- 	* |       _//  _ \|  |  \   __\  |/    \  / ___\ 
+	* __________               __  .__
+	* \______   \ ____  __ ___/  |_|__| ____    ____
+ 	* |       _//  _ \|  |  \   __\  |/    \  / ___\
  	* |    |   (  <_> )  |  /|  | |  |   |  \/ /_/  >
- 	* |____|_  /\____/|____/ |__| |__|___|  /\___  / 
-	*         \/                           \//_____/  	
+ 	* |____|_  /\____/|____/ |__| |__|___|  /\___  /
+	*         \/                           \//_____/
 	*/
 
 	$app->get('/', function () use ($app) {
-		
+
 	    $app->render('partials/home.html.twig', array(
 		    	'section'=>'index'
     		)
 	    );
+	});
+
+	$app->get('/pics', function () use ($app) {
+
+		$json = file_get_contents("pics.json");
+
+	    $app->render('partials/pics.html.twig', array(
+		    	'section'=>'pics',
+		    	'picsJson' => $json
+    		)
+	    );
+	});
+
+	$app->get('/pics/reset', function () use ($app) {
+
+		$handle = fopen("pics.json", "w");
+
+		$_photographers = scandir("img/photos");
+		$photographers = array();
+		foreach ($_photographers as $pg) {
+			if (substr($pg, 0, 1)!==".") {
+				$photographers[] = $pg;
+			}
+		}
+		$response = array();
+		foreach ($photographers as $pg) {
+			$dir = scandir("img/photos/" . $pg);
+			foreach ($dir as $file) {
+				if (
+					substr($file, 0, 1)!=="." &&
+					$file !=="thumbnails"
+				) {
+					$response[$pg][] = $file;
+				}
+			}
+			// var_dump($dir);
+		}
+		// var_dump($photographers);
+		fputs($handle, json_encode($response));
+
+		fclose($handle);
 	});
 
 
@@ -127,9 +168,9 @@
 	* __________            ._._._.
 	* \______   \__ __  ____| | | |
  	* |       _/  |  \/    \ | | |
- 	* |    |   \  |  /   |  \|\|\|	
+ 	* |    |   \  |  /   |  \|\|\|
  	* |____|_  /____/|___|  /_____
-	*        \/           \/\/\/\/	
+	*        \/           \/\/\/\/
 	*/
 	$app->run();
 ?>
