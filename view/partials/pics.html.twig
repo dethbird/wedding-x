@@ -2,18 +2,14 @@
 
 {% block body %}
 	{{ parent() }}
-    <div class="container col-lg-12"><h1>Pics</h1><br /></div>
-    <div id="pics-container" class="container col-lg-12">
-    </div>
+    <div id="header-container" class="container col-lg-12"><h1>Pics</h1><br /></div>
+    <div id="pics-container" class="container col-lg-12"></div>
 
     <script type="text/template" id="photographerTemplate"><div class="clearfix"></div><h1><%-name%></h1><div data-photographer="<%-name%>" class="pics"></div></script>
-    <script type="text/template" id="photoTemplate"><div class="photo"><img src="img/photos/<%-photographer%>/thumbnails/<%-filename%>" data-toggle="modal" data-target="#photo-modal" data-photographer="<%-photographer%>" data-photo="<%-filename%>" class="modal-trigger"></div></script>
+    <script type="text/template" id="photoTemplate"><div class="photo"><img src="img/photos/<%-photographer%>/thumbnails/<%-filename%>" data-photographer="<%-photographer%>" data-photo="<%-filename%>" class="overlay-trigger"></div></script>
 
     <script type="text/json" id="picsJson">{{picsJson|raw}}</script>
 
-    <div class="modal" tabindex="-1" role="dialog" id="photo-modal">
-        <div class="modal-content">
-            photo
-        </div>
-    </div>
+    <div id="overlay-background" class="hidden"></div>
+    <div id="overlay-photo-container" class="hidden"/><img id="overlay-photo" /></div>
 {% endblock %}
