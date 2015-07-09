@@ -6,10 +6,10 @@ $(window).load(function(){
         var container = $('div.pics[data-photographer="' + photographer + '"]');
         $.each(photos, function(i,photo){
             // console.log(photo);
-            if(i < 10) {
+            // if(i < 10) {
                 var template = _.template( $("#photoTemplate").html());
                 container.append(template({photographer: photographer, filename: photo}));
-            }
+            // }
         });
     });
     $('#overlay-photo').on("load", function(e){
